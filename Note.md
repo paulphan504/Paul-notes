@@ -24,8 +24,8 @@ cd node_exporter-*.*-amd64
 
 
 - Zabbix
-- [ ] go to home (@2024-11-01 11:59)
-- [ ] Relax (@2024-11-01 11:58)
+- [ ] go to home (@2024-11-29 12:51)
+- [ ] Relax (@2024-11-29 12:51)
 
 docker run -d \
 --name=ubuntu \
@@ -35,7 +35,7 @@ docker run -d \
 -e TZ=Etc/UTC \
 --restart unless-stopped \
 ubuntu:latest
-- [ ] Practice mounth and void sound(@2024-11-08 09:00) [link](https://www.youtube.com/watch?v=l69yZ5xabbo&t=3s)
+- [ ] Practice mounth and void sound(@2024-11-29 12:22) [link](https://www.youtube.com/watch?v=l69yZ5xabbo&t=3s)
 
 # Minimal command
 docker run -d --name pihole --network=host -e WEBPASSWORD="YourPassword" -e DNS1=1.1.1.1 -p 80:80 -p 53:53/tcp -p 53:53/udp -p 443:443 pihole/pihole:latest
