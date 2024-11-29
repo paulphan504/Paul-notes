@@ -18,3 +18,11 @@ upgrade brew
 brew update
 brew --version
 ```
+Install telnet on macos
+```bash
+brew install telnet
+```
+syntax connect with telnet
+```bash
+telnet [hostname/ipaddress] [port number]
+```

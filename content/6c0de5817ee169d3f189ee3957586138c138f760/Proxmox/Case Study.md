@@ -42,9 +42,51 @@ Note: if you use LXC containers, you do not need this script, as you can just co
 If you have any other questions, please feel free to ask!
 
 [How to import file .OVA to Proxmox VE server](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)
+[Refer link 2:](https://www.youtube.com/watch?v=EqGJYU96l0Q)
+
+[ How to Import VMDK to Proxmox?](https://vinchin.com/vm-migration/import-vmdk-proxmox.html)
+
+ [How to Import OVA/OVF in Proxmox?](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)
+ 
+
+
+ [How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)
+```bash
+qm create <vmid> --name <vm_name> --memory <memory_size> --net0 <model=e1000,bridge=vmbr0> --cores <number_of_cores> --sockets <number_of_sockets> --cpu <cpu_type>
+```
+
+```bash
+qm create 1233456 --name 12345 --memory 1024 --net0 model=e1000,bridge=vmbr0 --cores 2 --sockets 1 --cpu host
+```
+
+vmid: Unique identifier of the VM
+
+<memory_size>: Specify the size of the VM's memory, in MB or GB
+
+<model=e1000,bridge=vmbr0>: Network configuration, which can be modified as needed. Specify the network model of the VM as e1000 and the network bridge to the VM as vmbr0.
+
+<mark style="background: #FFB86CA6;">**How to list all VMID**</mark>
+
+```bash
+# cat /etc/pve/.vmlist
+```
+
+[The Complete Beginner's Guide to LVM in Linux](https://linuxhandbook.com/lvm-guide/#2-volume-groups)
+
+[How to config storge in proxmox](https://www.youtube.com/watch?v=HqOGeqT-SCA)
+
+```bash
+fdisk dev/sd_name_of_disk/
+
+command m for help: g (format GPT for partition)
+
+command m for help: w (write config)
+
+```
+![[Pasted image 20241129152602.png]]
 
 [Extend Boot Drive Storage In Proxmox (Resize)](https://www.youtube.com/watch?v=SsOLRiN4l9c)
-Refer comand script and solution other with many systems: [link](https://github.com/webmentordev/linux-bash-scripts-and-solutions/blob/master/Extend%20Proxmox%20Storage.txt)
+Refer command script and solution other with many systems very useful: [link](https://github.com/webmentordev/linux-bash-scripts-and-solutions/blob/master/Extend%20Proxmox%20Storage.txt)
 
 [How to copy source with SCP protocal](https://www.veerotech.net/kb/how-to-use-secure-copy-protocolscp-to-transfer-files-securely-on-linux-and-mac/)
 **Quick Steps**
@@ -64,4 +106,5 @@ Refer comand script and solution other with many systems: [link](https://github.
 **Fix error when install windows 11 on proxmox: need chosses CPU Processors 2 or more than**
 ![[Pasted image 20241129124248.png]]
 **How to fix warning 'neither intel VT-x or AMD-V' on VM run EVE-NG on Proxmox server**
+- If warning occurs devices on EVE-NG (SW, Router, Windows) not start (satart and stop immediated)
 ![[Pasted image 20241129134552.png]]
