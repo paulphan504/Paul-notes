@@ -60,3 +60,6 @@ Refer comand script and solution other with many systems: [link](https://github.
         **scp -P 22 _username@example.com_:~/file destination**
         
     5. Enter your password when prompted, and SCP will download the file to the specified destination directory.
+
+**Fix error when install windows 11 on proxmox: need chosses CPU Processors 2 or more than**
+![[Pasted image 20241129124248.png]]
