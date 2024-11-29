@@ -63,3 +63,5 @@ Refer comand script and solution other with many systems: [link](https://github.
 
 **Fix error when install windows 11 on proxmox: need chosses CPU Processors 2 or more than**
 ![[Pasted image 20241129124248.png]]
+**How to fix warning 'neither intel VT-x or AMD-V' on VM run EVE-NG on Proxmox server**
+![[Pasted image 20241129134552.png]]

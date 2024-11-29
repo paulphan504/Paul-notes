@@ -24,8 +24,8 @@ cd node_exporter-*.*-amd64
 
 
 - Zabbix
-- [ ] go to home (@2024-11-29 12:51)
-- [ ] Relax (@2024-11-29 12:51)
+- [ ] go to home (@2024-11-30)
+- [ ] Relax (@2024-11-30)
 
 docker run -d \
 --name=ubuntu \
