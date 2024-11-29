@@ -69,6 +69,8 @@ title: Welcome to My Notes
 
 ##### **<mark style="background: #BBFABBA6;">CCNA</mark>**
 
+[[ASA 5520]]
+
 [[CCNA 200-301 Official Cert Guide - Volume 1.pdf]]
 
 [[CCNA 200-301 vol2.pdf]] 
@@ -92,6 +94,5 @@ title: Welcome to My Notes
 
 [[Proxmox 8]]
 
-[[ASA 5520]]
 
 
