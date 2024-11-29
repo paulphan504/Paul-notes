@@ -90,7 +90,7 @@ title: Welcome to My Notes
 
 ## <mark style="background: #FFB8EBA6;">**Proxmox**</mark>
 
-[[Case Study]]
+[[Proxmox 8]]
 
 [[ASA 5520]]
 
