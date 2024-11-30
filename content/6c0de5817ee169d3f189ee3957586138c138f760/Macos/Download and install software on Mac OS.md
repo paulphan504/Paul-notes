@@ -28,6 +28,7 @@ telnet [hostname/ipaddress] [port number]
 ```
 
 [How to remove java on macos](https://www.java.com/en/download/help/mac_uninstall_java.html)
+
  **Uninstall Oracle Java using the Terminal**
 
 **Note:** To uninstall Java, you must have Administrator privileges and execute the remove command either as root or by using the `sudo` tool.
@@ -45,3 +46,10 @@ Remove one directory and one file (a symlink), as follows:
 Do not attempt to uninstall Java by removing the Java tools from `/usr/bin`. This directory is part of the system software and any changes will be reset by Apple the next time you perform an update of the OS.  
   
 Note: After successfully uninstalling Java, you may remove Java Deployment cache using these [instructions](https://www.java.com/deploymentcache/).
+
+**How do I remove the Java Deployment cache after Java is uninstalled?**
+
+```bash
+cd Library/Application\ Support/
+rm -r Oracle
+```
