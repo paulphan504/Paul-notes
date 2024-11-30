@@ -1,6 +1,46 @@
-Allway setup static ip address for VM and setup network card follow with image ![[Pasted image 20241124233235.png]]
+##### [How to setup DHCP server on proxmox provide ip for vm ](https://pve.proxmox.com/wiki/Setup_Simple_Zone_With_SNAT_and_DHCP)
+### Installation
 
-[Create folder for mount extend hdd or usb for copy data direct form usb to proxmox server](https://thehomelab.wiki/books/promox-ve/page/add-external-usb-storage-to-proxmox)
+In order to use the automatic DHCP feature you need to additionally install dnsmasq. You can do this via the following command:
+
+apt install dnsmasq
+
+Additionally, you should disable the default dnsmasq service:
+
+systemctl disable --now dnsmasq
+
+### Configuration
+
+Navigate to 'Datacenter > SDN > Zones' and create a new Simple zone with an ID of your choice. For activating DHCP, also tick the 'automatic DHCP' option in the advanced settings. As IPAM we select pve, which is available by default in SDN. In order to use the IPAM features described below, you need to use the 'pve' IPAM.
+
+Navigate to the VNet panel to create a new VNet with an ID of your choice (`vnet0` in our example). When creating the VNet, select the zone we created in the previous step.
+
+In the same view, create a Subnet in the previously created VNet. This can be done by selecting the VNet and clicking 'Create' in the Subnet panel on the right-hand side. Enter a local Subnet of your choice (in our example `10.0.0.0/24`). You also need to define an IP for the gateway, otherwise DHCP will not work (`10.0.0.1` in our example). Tick the 'SNAT' option in order to enable SNAT for this VNet.
+
+To use DHCP we also need to create a DHCP range for this Subnet. This can be done by switching to the Tab 'DHCP Ranges' in the Subnet creation dialog. I picked `10.0.0.50` and `10.0.0.200` as my start and end addresses for the DHCP range.
+
+- [![Zone Configuration](https://pve.proxmox.com/mediawiki/images/thumb/8/84/Simple_zone_dhcp.png/120px-Simple_zone_dhcp.png)](https://pve.proxmox.com/wiki/File:Simple_zone_dhcp.png "Zone Configuration")
+    
+    Zone Configuration
+    
+ - [![VNet Configuration](https://pve.proxmox.com/mediawiki/images/thumb/2/25/Vnet_configuration.png/120px-Vnet_configuration.png)](https://pve.proxmox.com/wiki/File:Vnet_configuration.png "VNet Configuration")
+    
+    VNet Configuration
+    
+ - [![Subnet Configuration](https://pve.proxmox.com/mediawiki/images/thumb/e/ee/Subnet_configuration.png/120px-Subnet_configuration.png)](https://pve.proxmox.com/wiki/File:Subnet_configuration.png "Subnet Configuration")
+    
+    Subnet Configuration
+    
+ - [![DHCP range configuration](https://pve.proxmox.com/mediawiki/images/thumb/0/02/Dhcp_range_configuration.png/120px-Dhcp_range_configuration.png)](https://pve.proxmox.com/wiki/File:Dhcp_range_configuration.png "DHCP range configuration")
+    
+    DHCP range configuration
+    
+
+Now that everything is set up, we need to apply the changes. This can be done by navigating to the SDN panel and clicking 'Apply'. Make sure that the network reload task finishes successfully. If it does complete without any errors or warnings you should be able to use your newly created VNet.
+
+ ##### **Setup static ip address for VM and setup network card follow with image** ![[Pasted image 20241124233235.png]]
+
+##### [Create folder for mount extend hdd or usb for copy data direct form usb to proxmox server](https://thehomelab.wiki/books/promox-ve/page/add-external-usb-storage-to-proxmox)
 
 **Figure out what drive it is**:
 
@@ -19,7 +59,7 @@ Now we mount the drive to it
 mount /dev/sdb1 /mnt/USB_Data
 ```
 
-[How to install 7zip to extract zip/rar file](https://askubuntu.com/questions/348173/how-to-install-7zip-to-extract-rar-files)
+##### [How to install 7zip to extract zip/rar file](https://askubuntu.com/questions/348173/how-to-install-7zip-to-extract-rar-files)
 To unrar files with... 7zip: 
 ```bash
 sudo apt-get install p7zip-full
@@ -27,7 +67,7 @@ sudo apt-get install p7zip-full
 ```
 and `x` mean extract obviously.
 
-[How to install extension copy&paste for Proxmox VE console](https://gist.github.com/amunchet/4cfaf0274f3d238946f9f8f94fa9ee02)
+##### [How to install extension copy&paste for Proxmox VE console](https://gist.github.com/amunchet/4cfaf0274f3d238946f9f8f94fa9ee02)
 
 1. Install Tampermonkey for your browser ([https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo?hl=en))
 2. Open up this script in "Raw" (or go to this url: [https://gist.github.com/amunchet/4cfaf0274f3d238946f9f8f94fa9ee02/raw/0b84970f89e1f282f09b86d46227eda71178c040/noVNCCopyPasteProxmox.user.js](https://gist.github.com/amunchet/4cfaf0274f3d238946f9f8f94fa9ee02/raw/0b84970f89e1f282f09b86d46227eda71178c040/noVNCCopyPasteProxmox.user.js))
@@ -41,15 +81,15 @@ Note: if you use LXC containers, you do not need this script, as you can just co
 
 If you have any other questions, please feel free to ask!
 
-[How to import file .OVA to Proxmox VE server](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)
-[Refer link 2:](https://www.youtube.com/watch?v=EqGJYU96l0Q)
+##### [How to import file .OVA to Proxmox VE server](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)
+##### [Refer link 2:](https://www.youtube.com/watch?v=EqGJYU96l0Q)
 
-[ How to Import VMDK to Proxmox?](https://vinchin.com/vm-migration/import-vmdk-proxmox.html)
+##### [ How to Import VMDK to Proxmox?](https://vinchin.com/vm-migration/import-vmdk-proxmox.html)
 
- [How to Import OVA/OVF in Proxmox?](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)
+ ##### **[How to Import OVA/OVF in Proxmox?](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)**
 
 
- [How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)
+ ##### **[How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)**
 ```bash
 qm create <vmid> --name <vm_name> --memory <memory_size> --net0 <model=e1000,bridge=vmbr0> --cores <number_of_cores> --sockets <number_of_sockets> --cpu <cpu_type>
 ```
@@ -70,9 +110,9 @@ vmid: Unique identifier of the VM
 # cat /etc/pve/.vmlist
 ```
 
-[The Complete Beginner's Guide to LVM in Linux](https://linuxhandbook.com/lvm-guide/#2-volume-groups)
+##### **[The Complete Beginner's Guide to LVM in Linux](https://linuxhandbook.com/lvm-guide/#2-volume-groups)**
 
-[How to config storge in proxmox](https://www.youtube.com/watch?v=HqOGeqT-SCA)
+##### **[How to config storge in proxmox](https://www.youtube.com/watch?v=HqOGeqT-SCA)**
 
 ```bash
 fdisk dev/sd_name_of_disk/
@@ -84,10 +124,10 @@ command m for help: w (write config)
 ```
 ![[Pasted image 20241129152602.png]]
 
-[Extend Boot Drive Storage In Proxmox (Resize)](https://www.youtube.com/watch?v=SsOLRiN4l9c)
+##### **[Extend Boot Drive Storage In Proxmox (Resize)](https://www.youtube.com/watch?v=SsOLRiN4l9c)**
 Refer command script and solution other with many systems very useful: [link](https://github.com/webmentordev/linux-bash-scripts-and-solutions/blob/master/Extend%20Proxmox%20Storage.txt)
 
-[How to copy source with SCP protocal](https://www.veerotech.net/kb/how-to-use-secure-copy-protocolscp-to-transfer-files-securely-on-linux-and-mac/)
+##### **[How to copy source with SCP protocal](https://www.veerotech.net/kb/how-to-use-secure-copy-protocolscp-to-transfer-files-securely-on-linux-and-mac/)**
 **Quick Steps**
 
 1. 1. Open a terminal window.
