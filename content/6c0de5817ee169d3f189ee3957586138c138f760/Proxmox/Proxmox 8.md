@@ -143,7 +143,10 @@ Refer command script and solution other with many systems very useful: [link](ht
     5. Enter your password when prompted, and SCP will download the file to the specified destination directory.
 
 **Fix error when install windows 11 on proxmox: need chosses CPU Processors 2 or more than**
+- Allway add TPM State and EFI Disk
+- Chooses Hard Disk (IDE or SATA)
 ![[Pasted image 20241129124248.png]]
 **How to fix warning 'neither intel VT-x or AMD-V' on VM run EVE-NG on Proxmox server**
 - If warning occurs devices on EVE-NG (SW, Router, Windows) not start (satart and stop immediated)
 ![[Pasted image 20241129134552.png]]
+

@@ -66,8 +66,10 @@ username ahsan password xxXxX
 
 
 
-authen token on github access to macbook pro paul phan: 
+<mark style="background: #FF5582A6;">**How to fix full disk on vm windows 11 (wm not start screen login )**</mark>
 
-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
+[<mark style="background: #FF5582A6;">**Clientless funtion on asa can for client connect to internet when access vpn on web vnp**</mark>](https://www.networkgalaxy.org/2013/06/clientless-ssl-vpn-webvpn-configuration.html?m=1)
 
-why and why.
+1. Config NAT interface ASA outsite <mark style="background: #FFF3A3A6;">on router ISP</mark> [link](https://networklessons.com/cisco/asa-firewall/cisco-asa-anyconnect-remote-access-vpn) [link2](https://www.networkstraining.com/cisco-asa-firewall-with-pppoe/) [link3](https://networkengineering.stackexchange.com/questions/41959/vpn-ipsec-tunnel-between-private-ip-asa-public-ip-asa) [link4](https://www.cisco.com/c/en/us/support/docs/security/ios-easy-vpn/200307-Configure-Easy-VPN-Tunnel-Between-Router.html) [link5](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13778-9.html)
+2. Config Bridge mode on route isp and pppoe on interface vlan asa device [link](https://www.expertnetworkconsultant.com/expert-approach-in-successfully-networking-devices/configure-cisco-asa-5506-x-for-pppoe-passthrough/)
+3. 
