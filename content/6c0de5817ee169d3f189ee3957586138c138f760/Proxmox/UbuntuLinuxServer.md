@@ -28,7 +28,7 @@ sudo shutdown now
 sudo shutdown now
 ```
 - close anydesk remote to ubuntu desktop.
-**------------------------------------------------------------------------**
+**-------------------------------------------------------------------------------------------**
 [How to add new device network card and put ip address on ubuntu server](https://ubuntu.com/server/docs/configuring-networks)
 
 - add new network card on vm ubuntu server on proxmox vm
