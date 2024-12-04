@@ -72,4 +72,5 @@ username ahsan password xxXxX
 
 1. Config NAT interface ASA outsite <mark style="background: #FFF3A3A6;">on router ISP</mark> [link](https://networklessons.com/cisco/asa-firewall/cisco-asa-anyconnect-remote-access-vpn) [link2](https://www.networkstraining.com/cisco-asa-firewall-with-pppoe/) [link3](https://networkengineering.stackexchange.com/questions/41959/vpn-ipsec-tunnel-between-private-ip-asa-public-ip-asa) [link4](https://www.cisco.com/c/en/us/support/docs/security/ios-easy-vpn/200307-Configure-Easy-VPN-Tunnel-Between-Router.html) [link5](https://www.cisco.com/c/en/us/support/docs/ip/network-address-translation-nat/13778-9.html)
 2. Config Bridge mode on route isp and pppoe on interface vlan asa device [link](https://www.expertnetworkconsultant.com/expert-approach-in-successfully-networking-devices/configure-cisco-asa-5506-x-for-pppoe-passthrough/)
-3. 
+
+
