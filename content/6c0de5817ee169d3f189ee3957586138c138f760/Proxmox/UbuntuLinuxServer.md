@@ -11,6 +11,9 @@ pass:
 ```
 
 ##### **How to connect Ubuntu Desktop thought teamviewer + anydesk**
+
+<mark style="background: #FF5582A6;">*Note:* <mark style="background: #FF5582A6;">no clock Ubuntu Desktop vm</mark>  only restart, logout if you want connect again with temviewer.</mark>
+
 - connect teamviewer with id and password below 
 	- login password on ubuntu desktop
 	- open anydesk
