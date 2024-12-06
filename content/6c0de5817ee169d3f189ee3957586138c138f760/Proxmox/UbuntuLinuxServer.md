@@ -1,7 +1,7 @@
 ##### Connect remote thought Teamviewer 
 ```bash
 id: 536 994 593
-Pass: Ptp@#2024
+Pass: 
 ```
 
 ##### **Connect remote thought Anydesk**
@@ -73,4 +73,9 @@ sudo ip addr flush ens19
 ip route show
 ```
 
-
+How to install and enable ssh server on Ubuntu
+```bash
+sudo apt install openssh-server
+sudo systemctl status ssh
+sudo ufw allow ssh 'if have configure firewall in system'
+```

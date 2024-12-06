@@ -24,13 +24,13 @@ I had two dishes this morning ^SYU4w9ve
 It all comes together to make a great breakfast ^QWjYeesa
 
 ## Embedded Files
-4569f74056c648056f46b15c1d31fef282203436: [[Pasted Image 20241120155649_224.png]]
+4569f74056c648056f46b15c1d31fef282203436: [[Temp/images/Pasted Image 20241120155649_224.png]]
 
-355e6127b2833ba648af01c26a3bdc050ac565b2: [[Pasted Image 20241121151846_553.png]]
+355e6127b2833ba648af01c26a3bdc050ac565b2: [[Temp/images/Pasted Image 20241121151846_553.png]]
 
-98168edfb2af0488630574560aaeb0d146ee8063: [[Pasted Image 20241123092146_814.png]]
+98168edfb2af0488630574560aaeb0d146ee8063: [[Temp/images/Pasted Image 20241123092146_814.png]]
 
-f7ab7fd76f0e39b9dce186354b4a68731a132027: [[Pasted Image 20241123092410_585.png]]
+f7ab7fd76f0e39b9dce186354b4a68731a132027: [[Temp/images/Pasted Image 20241123092410_585.png]]
 
 %%
 ## Drawing
