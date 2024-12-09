@@ -2,7 +2,7 @@
 
 Refer link setup: https://www.youtube.com/watch?v=wrlukx-QYRw&t=10s
 
-- VM Ubuntu server install on proxmox vm [[UbuntuLinuxServer]]
+- VM Ubuntu server install on proxmox vm [[UbuntuLinux]]
 	- enable ssh on ubuntu server, advantage for copy and paste command form internet for setup
 - Install docker on ubuntu server [link](https://docs.docker.com/engine/install/ubuntu/) 
 ```bash
