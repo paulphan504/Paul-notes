@@ -5,6 +5,7 @@
 | **IP:**           | 172.16.18.90/27                                                |
 | **Network Name:** | ens19                                                          |
 | **Status:**       | Static ip address setup on file  with information below<br>    |
+| DNS               | 1.1.1.1                                                        |
 
 - Directory content file
 ```bash
@@ -17,7 +18,7 @@ sudo nano 01-network-manager-all.yaml
        
 - ##### Connect remote thought Teamviewer 
 ```bash
-id: 536 994 593
+id: 1072 505 988
 Pass: 
 ```
 
@@ -101,9 +102,9 @@ sudo ufw allow ssh 'if have configure firewall in system'
 
 | **Username:**     | paul@linuxserver |
 | ----------------- | ---------------- |
-| **IP:**           | dhcp client      |
+| **IP:**           | 172.16.18.92     |
 | **Network Name:** | ens18            |
-| **Status:**       | <br>             |
+| **DNS:**          | 1.1.1.1<br>      |
 ##### **[How to setup static ip on ubuntu server with file config](https://krishnendubhowmick.medium.com/how-to-configure-a-static-ip-address-on-ubuntu-20-04-22-04-lts-step-by-step-4a35d6662083)**
 
 1. Copy file config for backup.
