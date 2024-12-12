@@ -150,7 +150,7 @@ Refer command script and solution other with many systems very useful: [link](ht
 ##### **How to setup start vm auto after turn on proxmox ve**
 ![[Pasted image 20241211160947.png]]
 
-##### **How to fix error '<mark style="background: #FFF3A3A6;">Falling back to a fallback locale ("en US.UTF-8")</mark>'**
+##### **[How to fix error](https://forum.proxmox.com/threads/perl-warning-setting-locale-failed.94218/) '<mark style="background: #FFF3A3A6;">Falling back to a fallback locale ("en US.UTF-8")</mark>'**
 ![[Screenshot 2024-12-12 at 15.11.35.png]]
 ```bash
 export LC_CTYPE=en_US.UTF-8
