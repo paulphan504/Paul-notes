@@ -86,6 +86,14 @@ If you have any other questions, please feel free to ask!
 
 ##### [ How to Import VMDK to Proxmox?](https://vinchin.com/vm-migration/import-vmdk-proxmox.html)
 
+```bash
+root@paulproxmox:/mnt/pve/EXT/template/iso/cd# qm importdisk 105 Parrot.qcow2 local-lvm
+```
+- Double click **Unused Disk** just create choose same with image.  
+![[Screenshot 2024-12-12 at 15.58.41.png]]
+- Tab **Options** -> **Boot Order** move up disk to first boot. 
+![[Screenshot 2024-12-12 at 15.58.41 1.png]]
+ 
  ##### **[How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)**
 ```bash
 qm create <vmid> --name <vm_name> --memory <memory_size> --net0 <model=e1000,bridge=vmbr0> --cores <number_of_cores> --sockets <number_of_sockets> --cpu <cpu_type>
@@ -150,7 +158,7 @@ Refer command script and solution other with many systems very useful: [link](ht
 ##### **How to setup start vm auto after turn on proxmox ve**
 ![[Pasted image 20241211160947.png]]
 
-##### **[How to fix error](https://forum.proxmox.com/threads/perl-warning-setting-locale-failed.94218/) '<mark style="background: #FFF3A3A6;">Falling back to a fallback locale ("en US.UTF-8")</mark>'**
+##### **[How to fix error after remote via ssh to proxmox vm](https://forum.proxmox.com/threads/perl-warning-setting-locale-failed.94218/) '<mark style="background: #FFF3A3A6;">Falling back to a fallback locale ("en US.UTF-8")</mark>'**
 ![[Screenshot 2024-12-12 at 15.11.35.png]]
 ```bash
 export LC_CTYPE=en_US.UTF-8
