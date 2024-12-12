@@ -86,9 +86,6 @@ If you have any other questions, please feel free to ask!
 
 ##### [ How to Import VMDK to Proxmox?](https://vinchin.com/vm-migration/import-vmdk-proxmox.html)
 
- ##### **[How to Import OVA/OVF in Proxmox?](https://www.vinchin.com/vm-backup/proxmox-import-ova-ovf.html)**
-
-
  ##### **[How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)**
 ```bash
 qm create <vmid> --name <vm_name> --memory <memory_size> --net0 <model=e1000,bridge=vmbr0> --cores <number_of_cores> --sockets <number_of_sockets> --cpu <cpu_type>
@@ -150,3 +147,12 @@ Refer command script and solution other with many systems very useful: [link](ht
 - If warning occurs devices on EVE-NG (SW, Router, Windows) not start (satart and stop immediated)
 ![[Pasted image 20241129134552.png]]
 
+##### **How to setup start vm auto after turn on proxmox ve**
+![[Pasted image 20241211160947.png]]
+
+##### **How to fix error '<mark style="background: #FFF3A3A6;">Falling back to a fallback locale ("en US.UTF-8")</mark>'**
+![[Screenshot 2024-12-12 at 15.11.35.png]]
+```bash
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+```
