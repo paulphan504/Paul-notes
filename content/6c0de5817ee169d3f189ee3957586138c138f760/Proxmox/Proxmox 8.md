@@ -92,7 +92,7 @@ root@paulproxmox:/mnt/pve/EXT/template/iso/cd# qm importdisk 105 Parrot.qcow2 lo
 - Double click **Unused Disk** just create choose same with image.  
 ![[Screenshot 2024-12-12 at 15.58.41.png]]
 - Tab **Options** -> **Boot Order** move up disk to first boot. 
-![[Screenshot 2024-12-12 at 15.58.41 1.png]]
+
  
  ##### **[How to use a Proxmox script to create a VM?](https://www.vinchin.com/vm-tips/proxmox-create-vm.html)**
 ```bash
@@ -164,3 +164,17 @@ Refer command script and solution other with many systems very useful: [link](ht
 export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 ```
+
+##### **[How to resize partition install linux os and windows os](https://www.system-rescue.org/Download/)**
+
+Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
+
+<mark style="background: #FFF3A3A6;">Note: don't use pci graphic card for vm, error occurs when boot form iso file systemresuce cd </mark>
+
+- Download **Systemrecuce CD** and mount cd drive on vm need resize partition
+- Press **ESC** on keyboard while turn on vm for boot to **Bios** system -> turn off by uncheck **secure boot** , save setting with **FN + F10 on macos** -> boot again and choose **boot form cd** choose the first tab **Default** off systemsecuce -> root screen command type **startx** for login screen desktop -> choose application resize partition delete partition among **main partition** and **partition  unlocated**    
+- Right click on partition need resize pull to end of partition unlocated for extend partition expect choose apply and finish ( in someone case partition noticed incident check in setting **Hardware** and **Options** off **Boot other** and **Type os**  )
+
+##### **[How to resize partition on Ubuntu Server](https://forum.proxmox.com/threads/resize-ubuntu-vm-disk.117810/)**
+
+![[Pasted image 20241214225531.png]]
