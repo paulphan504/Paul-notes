@@ -48,7 +48,7 @@ title: Welcome to My Notes
 
 [[CEHv12 - Lab 02.pdf]]
 
-
+[[CEH v12 - Module02.pdf]]
 
 
 ## <mark style="background: #ADCCFFA6;">**Excalidraw:**</mark>
