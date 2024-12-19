@@ -82,6 +82,8 @@ title: Welcome to My Notes
 
 [[English translate after]]
 
+[[CCNA-waren_ebook_new_Lab.pdf]]
+
 ## <mark style="background: #CACFD9A6;">**SQL Compare:**</mark>
 
 [[$ So sánh SQL server và Oracle 202407041240]].
