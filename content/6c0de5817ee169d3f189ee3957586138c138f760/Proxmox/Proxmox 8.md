@@ -178,3 +178,6 @@ Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
 ##### **[How to resize partition on Ubuntu Server](https://forum.proxmox.com/threads/resize-ubuntu-vm-disk.117810/)**
 
 ![[Pasted image 20241214225531.png]]
+
+##### **How to add Linux Bridge card connect direct to extend devices (static ip adress)**
+![[Pasted image 20241221222509.png]]
