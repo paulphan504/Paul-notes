@@ -30,3 +30,9 @@ Create rules permit protocol via **Wan** interface
 ##### **How to configure https, ssh login on pfsense**
 
 ![[Screenshot 2024-12-21 at 22.44.35.png]]![[Pasted image 20241221224727.png]]
+
+##### **[How to configure dns resolver](https://172.16.18.94/services_unbound.php)** 
+
+Note: default already on for this function on fw, you can disable or use access lists deny/permit for network you expect
+![[content/6c0de5817ee169d3f189ee3957586138c138f760/PFSense/images/Screenshot 2024-12-23 at 12.19.13.png]]
+![[Pasted image 20241223122746.png]]

@@ -139,3 +139,8 @@ find /path/to/directory -type f -name filename.ext
 *ex:* For example, to find the file named "sample.txt" within the `/var/www` you can use:
 
 `find /var/www -type f -name sample.txt `
+
+##### **How to show version with comman**
+```bash
+sudo lsb_release -a
+```
