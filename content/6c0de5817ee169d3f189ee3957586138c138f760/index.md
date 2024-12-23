@@ -101,5 +101,7 @@ title: Welcome to My Notes
 
 [[Proxmox 8]]
 
+[[Untitled Kanban]]
+
 
 
