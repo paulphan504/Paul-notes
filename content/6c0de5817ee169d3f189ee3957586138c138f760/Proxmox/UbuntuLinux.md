@@ -144,3 +144,12 @@ find /path/to/directory -type f -name filename.ext
 ```bash
 sudo lsb_release -a
 ```
+
+[How to show port open and configure firewall on Ubuntu Server ](https://linuxconfig.org/how-to-check-for-open-ports-on-ubuntu-linux)
+
+```bash
+sudo ss -ltnp "show port and services open on ubuntu server with command ss"
+sudo nmap localhost "show port and services open on ubuntu server with command nmap"
+sudo ufw status verbose "show status action off fw on ubuntu server"
+sudo ufw allow 80/tcp "permit port 80/tcp access via fw"
+```

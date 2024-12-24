@@ -36,3 +36,22 @@ Create rules permit protocol via **Wan** interface
 Note: default already on for this function on fw, you can disable or use access lists deny/permit for network you expect
 ![[content/6c0de5817ee169d3f189ee3957586138c138f760/PFSense/images/Screenshot 2024-12-23 at 12.19.13.png]]
 ![[Pasted image 20241223122746.png]]
+
+##### **[How to setup VLAN on for local LAN network and trunk vlan on Access point Unifi AP AC Pro](https://www.youtube.com/watch?v=SlkAB1nBLB0)**
+
+Create two **Vlan 10,20** from Lan local setup on proxmox vm via pfsense  (enp4s0/vmbr1/re0)  
+
+![[Pasted image 20241224155529.png]]
+![[Pasted image 20241224155358.png]]
+
+Create **dhcp server** on two vlan just created, you can setup range suiltabe with spect 
+![[Pasted image 20241224155733.png]]
+
+On controller unifi create two vlan **OPT1/20 and OPT2/40** (choose same name with vlan created on fw pfsense)
+![[Pasted image 20241224160412.png]]
+
+Create **ssid** same with each vlan tab **Network**
+![[Pasted image 20241224160758.png]]
+
+Connect wifi on two ssid and sure connected to internet and assign correct ip with each vlan
+![[Pasted image 20241224161609.png]]
