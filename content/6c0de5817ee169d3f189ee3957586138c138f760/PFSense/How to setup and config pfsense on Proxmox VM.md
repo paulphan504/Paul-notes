@@ -55,3 +55,9 @@ Create **ssid** same with each vlan tab **Network**
 
 Connect wifi on two ssid and sure connected to internet and assign correct ip with each vlan
 ![[Pasted image 20241224161609.png]]
+
+[How to setup PFBlockerNG on fw pfsense ](https://github.com/ahuacate/pfsense-pfblockerng)
+
+Download and install Packages of PFBlockerng with patch in image flow.
+![[anydesk00005.png]]
+
