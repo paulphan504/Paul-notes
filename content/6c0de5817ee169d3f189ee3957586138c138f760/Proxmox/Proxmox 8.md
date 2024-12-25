@@ -179,5 +179,9 @@ Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
 
 ![[Pasted image 20241214225531.png]]
 
-##### **How to add Linux Bridge card connect direct to extend devices (static ip adress)**
+##### **How to add Linux Bridge card connect direct to extend devices network card (static ip adress)**
 ![[Pasted image 20241221222509.png]]
+
+##### **How to setup vlan for Linux Bridge** <mark style="background: #FFF3A3A6;">(sync vlan on firewall Pfsense with vlan on Proxmox VM, use for access vlan of vm running on proxmox vm)</mark>
+![[Screenshot 2024-12-25 at 23.28.52.png]]
+![[Pasted image 20241225232647.png]]

@@ -56,7 +56,18 @@ Create **ssid** same with each vlan tab **Network**
 Connect wifi on two ssid and sure connected to internet and assign correct ip with each vlan
 ![[Pasted image 20241224161609.png]]
 
-[How to setup PFBlockerNG on fw pfsense ](https://github.com/ahuacate/pfsense-pfblockerng)
+##### **How to setup Rules on firewall Pfsense**
+- Rules access internet (TCP/UDP) and rules ping (ICMP) on Vlan OPT1, OPT2 of Lan Network
+![[Pasted image 20241225225719.png]]
+
+- Rules access all services on Lan Network
+![[Pasted image 20241225230438.png]]
+
+##### **How to setup Vlan sync with interface vlan on Proxmox VM**
+**Link refer:** [[How to setup and configure pfsense on Proxmox VM]]
+<mark style="background: #FFF3A3A6;">Key word for find:</mark> `How to setup vlan for Linux Bridge`
+
+##### **[How to setup PFBlockerNG on fw pfsense ](https://github.com/ahuacate/pfsense-pfblockerng)**
 
 Download and install Packages of PFBlockerng with patch in image flow.
 ![[anydesk00005.png]]
