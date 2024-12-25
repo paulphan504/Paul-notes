@@ -63,8 +63,8 @@ Connect wifi on two ssid and sure connected to internet and assign correct ip wi
 - Rules access all services on Lan Network
 ![[Pasted image 20241225230438.png]]
 
-##### **How to setup Vlan sync with interface vlan on Proxmox VM**
-**Link refer:** [[How to setup and configure pfsense on Proxmox VM]]
+##### **How to setup Vlan sync with interface vlan on Proxmox VM** (sync vlan on firewall Pfsense with vlan on Proxmox VM, use for access vlan of vm running on proxmox vm)
+**Link refer:** [[Proxmox 8]]
 <mark style="background: #FFF3A3A6;">Key word for find:</mark> `How to setup vlan for Linux Bridge`
 
 ##### **[How to setup PFBlockerNG on fw pfsense ](https://github.com/ahuacate/pfsense-pfblockerng)**
