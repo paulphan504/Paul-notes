@@ -185,3 +185,8 @@ Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
 ##### **How to setup vlan for Linux Bridge** <mark style="background: #FFF3A3A6;">(sync vlan on firewall Pfsense with vlan on Proxmox VM, use for access vlan of vm running on proxmox vm)</mark>
 ![[Screenshot 2024-12-25 at 23.28.52.png]]
 ![[Pasted image 20241225232647.png]]
+
+##### **How to connect Vlan on Proxmox VM to EVE-NG <mark style="background: #FFF3A3A6;">(connect any virtual devices on EVE-NG apply with Vlan and Rules on Firewall PFsense </mark>)**
+
+*Link refer:* [[EVE Configure]]
+*Key words for find:* `How to add and configure new network card on EVE-NG connect to VLAN of Proxmox->Firewall Pfsense directive`
