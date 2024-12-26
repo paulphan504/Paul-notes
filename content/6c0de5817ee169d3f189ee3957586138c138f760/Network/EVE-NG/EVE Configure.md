@@ -1,3 +1,4 @@
+##### **[Guide configure](https://www.eve-ng.net/images/EVE-COOK-BOOK-1.5.pdf)** 
 ##### [ Set Static IP Address on EVE-NG: Restart the setup process](https://youtube.com/watch?v=rEcYLuaYBGk)
 To do this, follow these steps:
 
