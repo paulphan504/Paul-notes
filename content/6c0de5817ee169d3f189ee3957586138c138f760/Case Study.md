@@ -23,3 +23,7 @@ sudo docker run --name adguardhome\
    2.2.1/ Login Adgruad with **ip card bridge** with port **3000 or 3002** same with configure yml file
 3. Setup **KASM_Server**  serves for open container running web_browser install on **step 2.2**
 3. 1/ How to ssh to container install KASM_Server , because when connect direct via Portainer/Container Console disadvangeted 
+		<mark style="background: #BBFABBA6;">***Resolve:*** connect ssh to container [[How to install Docker and Portainer on Proxmox VM]]</mark>
+
+4. Fix connect with explain in image below. 
+![[Pasted image 20241227233528.png]]
