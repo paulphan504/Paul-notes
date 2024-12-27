@@ -1,8 +1,8 @@
-- **Wireshare**: Test flow packet data running when connect vpn Wireguard Tunnel use dns Adgurad on local macbook (127.0.0.1 / 172.16.18.81)
+1. **Wireshare**: Test flow packet data running when connect vpn Wireguard Tunnel use dns Adgurad on local macbook (127.0.0.1 / 172.16.18.81)
 	- Full traffic data via vpn
 	- Slipt traffic data via vpn
 
-- Install Adgurad on Docker 
+2. Install Adgurad on Docker 
 ```bash
 sudo docker run --name adguardhome\
     --restart unless-stopped\
@@ -17,3 +17,9 @@ sudo docker run --name adguardhome\
     -d adguard/adguardhome
 
 ```
+
+2. 1/ Connect to web configure Adgurad but not have information  **username/password** login
+2. 2/ Install new container run web browser **chrome/fire_fox/brave_browser** with same network card Bridge
+   2.2.1/ Login Adgruad with **ip card bridge** with port **3000 or 3002** same with configure yml file
+3. Setup **KASM_Server**  serves for open container running web_browser install on **step 2.2**
+3. 1/ How to ssh to container install KASM_Server , because when connect direct via Portainer/Container Console disadvangeted 

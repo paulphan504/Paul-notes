@@ -65,16 +65,16 @@ groups "show group running"
 less /etc/passwd | grep messagebus "restrict user with namw"
 ```
 
-##### [How to Enable SSH with Password Authentication on Ubuntu](https://medium.com/@ravidevops2470/how-to-enable-ssh-with-password-authentication-on-ubuntu-22-04-a7cbdf476d8b)
+##### [How to Install and Enable SSH with Password Authentication on Ubuntu](https://medium.com/@ravidevops2470/how-to-enable-ssh-with-password-authentication-on-ubuntu-22-04-a7cbdf476d8b)
 
 ```bash
 sudo apt update  
 sudo apt install openssh-server "Install OpenSSH Server"
 sudo nano /etc/ssh/sshd_config "Edit SSH Configuration, reference image show below "
-service restart ssh
-service start ssh
+sudo service restart ssh "or use commad" sudo service ssh restart
+sudo service start ssh "or use commad"  sudo service ssh start
 passwd "change password login ubuntu container"
-ssh username@your_server_ip "remote login thought ssh with syntax"
+ssh username@your_server_ip "check remote login thought ssh with syntax"
 ```
 ![[Pasted image 20241014221457.png]]
 

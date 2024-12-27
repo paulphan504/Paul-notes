@@ -53,3 +53,17 @@ Note: After successfully uninstalling Java, you may remove Java Deployment cache
 cd Library/Application\ Support/
 rm -r Oracle
 ```
+
+##### [How to enable SSH Server on macos](https://osxdaily.com/2022/07/08/turn-on-ssh-mac/)
+Turning on the macOS SSH server is done through system preferences in earlier versions of MacOS:
+
+1. Pull down the  Apple menu and go to “System Preferences”
+2. Open the “Sharing” preference panel”
+3. Check the box for “Remote Login” to turn on the SSH server on the Mac
+4. Optionally but recommended for anyone wanting to create a full shell experience, check the box for “Allow full disk access for remote users”  
+    ![Enable SSH Server on Mac with Remote Login](https://cdn.osxdaily.com/wp-content/uploads/2022/04/enable-ssh-mac-remote-login-610x465.jpg)
+    
+5. The SSH server has started, you’re free to connect to the Mac using any SSH client
+
+You can connect to the Mac with any SSH client from any operating system, whether it’s another Mac with Terminal, Windows PC with PuTTY, Linux with a terminal, iPhone or Android with an SSH app, Android with an SSH app, or anything else with an SSH client.
+

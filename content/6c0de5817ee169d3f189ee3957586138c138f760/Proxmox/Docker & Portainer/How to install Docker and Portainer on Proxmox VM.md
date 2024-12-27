@@ -16,3 +16,7 @@ docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:2.21.4
 ```
 - Connect to portainer with web browser https://172.16.18.90:9443 and create user name and password for begin login to manage page
+
+##### **How to connect ssh to container from Ubuntu Server running Docker**
+- Install Openssh_server on container with [[$ Comman in terminal macos & linux.]]
+![[Pasted image 20241227232830.png]]
