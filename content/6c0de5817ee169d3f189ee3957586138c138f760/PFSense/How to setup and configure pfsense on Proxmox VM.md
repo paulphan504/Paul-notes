@@ -72,3 +72,5 @@ Connect wifi on two ssid and sure connected to internet and assign correct ip wi
 Download and install Packages of PFBlockerng with patch in image flow.
 ![[anydesk00005.png]]
 
+**How to configure VPN with WireGurad Tunnels**
+Link Refer:[ youtube1](https://www.youtube.com/watch?v=he3ENpMLMsc&t=1822s) [youtube2](https://www.youtube.com/watch?v=IvGjWndvTk0)

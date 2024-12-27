@@ -1,7 +1,14 @@
 Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
 - Free domain for local Duck DNS [link](https://www.duckdns.org/domains)
+*Note:* only use five sub domain for maximum.
 
 ![[Screenshot 2024-12-09 at 16.25.02.png]]
+
+- Add SSL Certificate sync to Dynamic Duck DNS, maybe need sync three session for connect success.
+![[Pasted image 20241227115133.png]]
+
+- Create Proxy Host for devices/vm in you systems.
+![[Pasted image 20241227115031.png]]
 
 - Source for NGNIX Server Manager [link](https://hub.docker.com/r/jc21/nginx-proxy-manager)
 
