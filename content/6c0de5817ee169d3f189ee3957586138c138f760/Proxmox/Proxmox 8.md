@@ -2,13 +2,13 @@
 ### Installation
 
 In order to use the automatic DHCP feature you need to additionally install dnsmasq. You can do this via the following command:
-
+```bash
 apt install dnsmasq
-
+```
 Additionally, you should disable the default dnsmasq service:
-
+```bash
 systemctl disable --now dnsmasq
-
+```
 ### Configuration
 
 Navigate to 'Datacenter > SDN > Zones' and create a new Simple zone with an ID of your choice. For activating DHCP, also tick the 'automatic DHCP' option in the advanced settings. As IPAM we select pve, which is available by default in SDN. In order to use the IPAM features described below, you need to use the 'pve' IPAM.
