@@ -42,7 +42,7 @@ cat /opt/unetlab/addons/iol/bin/iourc
 - Add network card on vm running **Eve-ng** and configure tag to vlan expect on **Proxmox** connect with vlan similar on **Firewall Pfsense**.
 ![[Pasted image 20241226103517.png]]
 
-- Configure file manage network interfaces on Eve-ng 
+- Configure file manage network interfaces on Eve-ng `sudo nano etc\network\interfaces`
 ```bash
 	iface eth1 inet manual
 	auto pnet1

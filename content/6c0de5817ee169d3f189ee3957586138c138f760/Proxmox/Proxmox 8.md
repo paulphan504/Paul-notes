@@ -191,3 +191,12 @@ Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
 
 *Link refer:* [[EVE Configure]]
 *Key words for find:* `How to add and configure new network card on EVE-NG connect to VLAN of Proxmox->Firewall Pfsense directive`
+
+##### **[How to fix error io-error on vm proxmox](https://www.reddit.com/r/Proxmox/comments/15snbks/running_ioerror_on_vms/?rdt=60482)**
+- **Resolve:** Delete snapshot on vm alert io-error for fix accident 
+- **Note:** use someone command for show information proxmox vm and vm on proxmox
+```bash
+pveversion -v "show information proxmox vm"
+qm config <VMID> "example: qm config 104"
+
+```

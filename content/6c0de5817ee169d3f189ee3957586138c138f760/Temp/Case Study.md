@@ -27,3 +27,6 @@ sudo docker run --name adguardhome\
 
 4. Fix connect with explain in image below. 
 ![[Pasted image 20241227233528.png]]
+5. How to connect and apply DHCP_server/Vlan form network of Router/SW in Eve-ng environment to Devices/VM on Proxmox VM
+<mark style="background: #BBFABBA6;">Resolve: 
+- Provide dhcp form Router on Eve-ng to vm on Proxmox (network card Bridge Cloud2/pnet2/eth2/vmbr2) and vm windows 10 on Eve-ng (network card Cloud2/pnet2/eth2/vmbr2)</mark>
