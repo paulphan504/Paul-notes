@@ -196,7 +196,7 @@ Refer : [Link youtube](https://www.youtube.com/watch?v=cwsSAzzaXIw)
 - **Resolve:** Delete snapshot on vm alert io-error for fix accident 
 - **Note:** use someone command for show information proxmox vm and vm on proxmox
 ```bash
-pveversion -v "show information proxmox vm"
+pveversion -v "show information proxmox "
 qm config <VMID> "example: qm config 104"
 
 ```
