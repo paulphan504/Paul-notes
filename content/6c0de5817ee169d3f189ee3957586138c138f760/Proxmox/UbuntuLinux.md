@@ -188,3 +188,15 @@ From the above image:
 6. **Home directory**: The absolute path to the directory the user will be in when they log in. If this directory does not exists then users directory becomes /
 7. **Command/shell**: The absolute path of a command or shell (/bin/bash). Typically, this is a shell. Please note that it does not have to be a shell. For example, sysadmin can use the nologin shell, which acts as a replacement shell for the user accounts. If shell set to /sbin/nologin and the user tries to log in to the Linux system directly, the /sbin/nologin shell closes the connection
 
+##### **[How to fix ssh root user permission deny on ubuntu server 22.04](https://www.youtube.com/watch?v=XYx9vi0XEi8)**
+
+**Note:** can use this method [[$ Comman in terminal macos & linux.]] with key word (<mark style="background: #FFF3A3A6;">How to Install and Enable SSH with Password Authentication on Ubuntu</mark>)
+
+```bash
+paul@linuxserver:/$ sudo nano /etc/ssh/sshd_config.d/mycf.conf "create file mycf.conf on ubuntu_server running ssh_serverfor ssh and type command '**PermitRootLogin yes**' "
+paul@linuxserver:/$ sudo systemctl restart ssh "restart services ssh"
+
+ssh root@172.16.18.92 "login ssh on macbook to ubuntu_server with root account and sure success same image below"
+
+```
+![[Pasted image 20241229225324.png]]

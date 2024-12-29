@@ -66,6 +66,7 @@ less /etc/passwd | grep messagebus "restrict user with namw"
 ```
 
 ##### [How to Install and Enable SSH with Password Authentication on Ubuntu](https://medium.com/@ravidevops2470/how-to-enable-ssh-with-password-authentication-on-ubuntu-22-04-a7cbdf476d8b)
+**Note:** can use other method [[UbuntuLinux]] key word (<mark style="background: #FFF3A3A6;">How to fix ssh root user permission deny on ubuntu server 22.04</mark>)
 
 ```bash
 sudo apt update  

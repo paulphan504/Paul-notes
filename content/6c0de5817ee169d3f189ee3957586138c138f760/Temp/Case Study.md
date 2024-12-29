@@ -1,8 +1,8 @@
-1. **Wireshare**: Test flow packet data running when connect vpn Wireguard Tunnel use dns Adgurad on local macbook (127.0.0.1 / 172.16.18.81)
+##### 1. **Wireshare: Test flow packet data running when connect vpn Wireguard Tunnel use dns Adgurad on local macbook (127.0.0.1 / 172.16.18.81)**
 	- Full traffic data via vpn
-	- Slipt traffic data via vpn
+	- Slipt traffic data via vpn "local traffic access thought vpn Wiregurad, internet traffic access thought dns setup on devices provide maybe form modem/dns_services(adgurad local, 1.1.1.1, 8.8.8.8)"
 
-2. Install Adgurad on Docker 
+##### 2. Install Adgurad on Docker 
 ```bash
 sudo docker run --name adguardhome\
     --restart unless-stopped\
@@ -21,13 +21,13 @@ sudo docker run --name adguardhome\
 2. 1/ Connect to web configure Adgurad but not have information  **username/password** login
 2. 2/ Install new container run web browser **chrome/fire_fox/brave_browser** with same network card Bridge
    2.2.1/ Login Adgruad with **ip card bridge** with port **3000 or 3002** same with configure yml file
-3. Setup **KASM_Server**  serves for open container running web_browser install on **step 2.2**
+##### 3. **Setup KASM_Server  serves for open container running web_browser install on step 2.2**
 3. 1/ How to ssh to container install KASM_Server , because when connect direct via Portainer/Container Console disadvangeted 
 		<mark style="background: #BBFABBA6;">***Resolve:*** connect ssh to container [[How to install Docker and Portainer on Proxmox VM]]</mark>
 
-4. Fix connect with explain in image below. 
+##### 4. **How to Fix connect container/ubuntuserver/promoxvm with port manual ssh 222  with explain in image below.** 
 ![[Pasted image 20241227233528.png]]
-5. How to connect and apply DHCP_server/Vlan form network of Router/SW in Eve-ng environment to Devices/VM on Proxmox VM
+##### 5. **How to connect and apply DHCP_server/Vlan form network of Router/SW in Eve-ng environment to Devices/VM on Proxmox VM**
 <mark style="background: #BBFABBA6;">Resolve: 
  Provide dhcp form Router on Eve-ng to vm on Proxmox (network card Bridge Cloud2/pnet2/eth2/vmbr2) and vm windows 10 on Eve-ng (network card Cloud2/pnet2/eth2/vmbr2)</mark>
 ![[Pasted image 20241228172104.png]]
@@ -36,7 +36,7 @@ sudo docker run --name adguardhome\
 
 ```
 
-6. [How to ssh to router on eve-ng with teminal macos](https://gulian.uk/8-steps-to-configure-ssh-on-a-cisco-router-or-switch/)
+##### 6. **[How to ssh to router on eve-ng with teminal macos](https://gulian.uk/8-steps-to-configure-ssh-on-a-cisco-router-or-switch/)**
 - **Note:** 
 	- Only connect vpn Wiregurad on vlan 20/40/1 for ssh to router with diagram above 
 	![[Pasted image 20241228223025.png]]
