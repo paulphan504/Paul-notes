@@ -65,3 +65,9 @@ ssh root@192.168.20.101 -oKexAlgorithms=+diffie-hellman-group14-sha1 -oHostkeyAl
 ssh root@192.168.20.101 -oKexAlgorithms=+diffie-hellman-group14-sha1 -oHostkeyAlgorithms=+ssh-rsa
 ```
 ![[Pasted image 20241228211323.png]]![[Pasted image 20241228212225.png]]
+
+##### 7. **How to create vlan and add vlan for each devices in network lan**
+- devices PaulPhan deny social media (facebook, tiktok, pinterest)
+- devices TuyetNguyen deny (tiktok, permit bandwith 20mbps)
+
+##### 8. **How to create pencil write on touchpad mac book PaulPhan with touch gloves**
