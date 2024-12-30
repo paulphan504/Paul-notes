@@ -1,3 +1,4 @@
+**Document online :** [link](https://docs.netgate.com/pfsense/en/latest/recipes/freebsd-pkg-repo.html)
 
 | Web page communication     | [link](https://www.reddit.com/r/PFSENSE/comments/1co8f1o/pfsense_iso_download_requires_an_account_and/) |
 | -------------------------- | ------------------------------------------------------------------------------------------------------- |
