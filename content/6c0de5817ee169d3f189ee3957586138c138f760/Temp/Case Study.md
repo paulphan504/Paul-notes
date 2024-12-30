@@ -71,3 +71,6 @@ ssh root@192.168.20.101 -oKexAlgorithms=+diffie-hellman-group14-sha1 -oHostkeyAl
 - devices TuyetNguyen deny (tiktok, permit bandwith 20mbps)
 
 ##### 8. **How to create pencil write on touchpad mac book PaulPhan with touch gloves**
+
+##### 9. **[How to configure 2FA for GUI access in pfSense](https://www.comparitech.com/blog/vpn-privacy/pfsense-two-factor-authentication/)**
+**Resolve:**![[Pasted image 20241230114924.png]]
