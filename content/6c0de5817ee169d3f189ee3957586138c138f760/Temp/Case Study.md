@@ -18,7 +18,8 @@ sudo docker run --name adguardhome\
 
 ```
 
-2. 1/ Connect to web configure Adgurad but not have information  **username/password** login
+2. 1/ **Connect to web configure Adgurad but not have information  username/password login**
+
    <mark style="background: #BBFABBA6;">Resolve:</mark> [how to change password adgurad install on container/ubuntuserver/proxmox](https://hostingcanada.org/htpasswd-generator/)
    - You need to edit the password field in the `AdGuardHome.yaml` file. Use this to generate a new password (you must set it to `BCrypt`): [https://hostingcanada.org/htpasswd-generator/](https://hostingcanada.org/htpasswd-generator/)
    ![[Pasted image 20241230171805.png]]
@@ -40,7 +41,7 @@ sudo docker run --name adguardhome\
 2. 2/ Install new container run web browser **chrome/fire_fox/brave_browser** with same network card Bridge
    2.2.1/ Login Adgruad with **ip card bridge** with port **3000 or 3002** same with configure yml file
 ##### 3. **Setup KASM_Server  serves for open container running web_browser install on step 2.2**
-3. 1/ How to ssh to container install KASM_Server , because when connect direct via Portainer/Container Console disadvangeted 
+3. 1/ How to ssh to container install KASM_Server with manual port (2222) , because when connect direct via Portainer/Container Console disadvangeted 
 		<mark style="background: #BBFABBA6;">***Resolve:*** connect ssh to container [[How to install Docker and Portainer on Proxmox VM]]</mark>
 
 ##### 4. **How to Fix connect container/ubuntuserver/promoxvm with port manual ssh 222  with explain in image below.** 
@@ -142,3 +143,103 @@ AllowedIPs = 10.0.0.4/32
 ##### 11. **How to use adgurad on container is proxy for network in container/other network in container/ vm on proxmox**
 - how to configure dns on container [link](https://forums.docker.com/t/how-to-config-the-dns-for-a-container/52395)
 ![[Pasted image 20241230181822.png]]
+
+##### [12. **How to install Qemu_Guest_Agent on Ubuntu](https://forum.proxmox.com/threads/solved-guest-agent-not-running.149049/)**
+- Follow these steps This is the daemon used to exchange data between the guest and the host.
+```bash
+apt-get install qemu-guest-agent "command installs it."
+systemctl start qemu-guest-agent  "starts the daemon"
+systemctl enable qemu-guest-agent "enables it at VM boot"
+```
+![[Pasted image 20241231222416.png]]
+
+##### **13.[ How to install Qemu_Guest_Agent on Pfsense run FreeBSD OS on Proxmox VE](https://www.reddit.com/r/PFSENSE/comments/18l8ibz/easily_install_qemuguestagent_on_pfsenseproxmox/?rdt=44111)**
+
+- Other method on Github : [link](https://github.com/Weehooey/pfSense-scripts)
+
+1- Take a snapshot on Proxmox for the VM (good to have)  
+2- Update VM settings in Proxmox portal - Options --> Qemu... - screenshot attached  
+3- Reboot (Stop then Start) the pfSense VM for the change to take effect
+
+[![r/PFSENSE - pfsense-proxmox-settings](https://preview.redd.it/easily-install-qemu-guest-agent-on-pfsense-proxmox-step-by-v0-gc1qyctox17c1.png?width=473&format=png&auto=webp&s=64282a90f7f505d332a0890e91c9c8dbf791f9c7)](https://preview.redd.it/easily-install-qemu-guest-agent-on-pfsense-proxmox-step-by-v0-gc1qyctox17c1.png?width=473&format=png&auto=webp&s=64282a90f7f505d332a0890e91c9c8dbf791f9c7 "Image from r/PFSENSE - pfsense-proxmox-settings")
+
+pfsense-proxmox-settings
+
+4- From UI or CLI, update pfS to the latest version (currently 2.7.2)  
+5- login to pfSense console - hit 8 to get to CLI - paste
+
+`pkg install -y qemu-guest-agent`
+
+`cat > /etc/rc.conf.local << EOF`
+
+`qemu_guest_agent_enable="YES"`
+
+`qemu_guest_agent_flags="-d -v -l /var/log/qemu-ga.log"`
+
+`#virtio_console_load="YES"`
+
+`EOF`
+
+`cat > /usr/local/etc/rc.d/qemu-agent.sh << EOF`
+
+`#!/bin/sh`
+
+`sleep 5`
+
+`service qemu-guest-agent start`
+
+`EOF`
+
+`chmod +x /usr/local/etc/rc.d/qemu-agent.sh`  
+`service qemu-guest-agent start`
+
+6- Validate from Proxmox summary screen to see IPs - screenshot attached
+
+[![r/PFSENSE - Easily install qemu-guest-agent on pfSense/Proxmox - Step-by-Step](https://preview.redd.it/easily-install-qemu-guest-agent-on-pfsense-proxmox-step-by-v0-oltkx5xuz17c1.png?width=489&format=png&auto=webp&s=b37b1d28da723ec8cf42f7ac22f0489472e3e060)](https://preview.redd.it/easily-install-qemu-guest-agent-on-pfsense-proxmox-step-by-v0-oltkx5xuz17c1.png?width=489&format=png&auto=webp&s=b37b1d28da723ec8cf42f7ac22f0489472e3e060 "Image from r/PFSENSE - Easily install qemu-guest-agent on pfSense/Proxmox - Step-by-Step")
+
+Note: Little trick - If you connecting to a remote pfSense over VPN that you can't reboot or would be locked out to start again - you can run this from the Proxmox shell to make sure it starts in one line.
+
+`qm stop VMID && qm start VMID`.
+
+##### 14. [**How to install Debian 9.2 running on Proxmox VE**](https://www.youtube.com/watch?v=gGsgl0t8py0)
+- Configure necessary in initial
+```bash
+ip a "show information ip address"
+apt install sudo "install sudo"
+sudo apt update "update debian"
+sudo apt upgruade "upgruade debian"
+nano /etc/network/interfaces "access file configure network of debian"
+iface ens18 inet static "access file interfaces configure static ip for debian"
+        address 172.16.18.89
+        netsmask 255.255.255.224
+        gateway 172.16.18.68
+        namserver 1.1.1.1
+ sudo nano /etc/resolv.conf "access file resolv.conf configure dns for debian access internet"
+	nameserver 1.1.1.1
+	
+apt-get install ca-certificates "add certificate help debian access some website/ftp_file from internet (ex: Qemu_Guest_Agent)"
+```
+
+##### 15. **[How to install Adgurad on Debian 9.2](https://github.com/adguardteam/adguardhome/wiki/VPS)**
+```bash
+wget https://static.adguard.com/adguardhome/release/AdGuardHome_linux_amd64.tar.gz
+tar xvf AdGuardHome_linux_amd64.tar.gz
+
+cd AdGuardHome
+pwd
+sudo ./AdGuardHome -s install
+AdGuardHome -s uninstall "uninstalls the AdGuard Home service"
+AdGuardHome -s start "starts the service"
+AdGuardHome -s stop "stops the service"
+AdGuardHome -s restart "restarts the service"
+AdGuardHome -s status "shows the current service status"
+host doubleclick.net 127.0.0.1 "If everything works correctly, you will get this output:
+Using domain server:
+Name: 127.0.0.1
+Address: 127.0.0.1#53
+Aliases:
+
+Host doubleclick.net not found: 3(NXDOMAIN)"
+```
+
+##### 16. **How to install Qemu_Guest_agent on Debian/Promoc_VE**
