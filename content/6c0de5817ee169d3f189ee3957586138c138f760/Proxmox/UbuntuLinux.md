@@ -202,3 +202,5 @@ ssh root@172.16.18.92 "login ssh on macbook to ubuntu_server with root account a
 
 ```
 ![[Pasted image 20241229225324.png]]
+
+How to 

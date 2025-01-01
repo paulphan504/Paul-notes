@@ -20,3 +20,23 @@ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /va
 ##### **How to connect ssh to container from Ubuntu Server running Docker**
 - Install Openssh_server on container with [[$ Comman in terminal macos & linux.]]
 ![[Pasted image 20241227232830.png]]
+
+##### **How to add new port (22222:22 for ssh container run in Docker/Ubuntu_Server/Proxmox_VE from Macbook same network lan with Proxmox_VE) for container with method commit container already created and running in docker**
+Refer: [link](https://stackoverflow.com/questions/19335444/how-do-i-assign-a-port-mapping-to-an-existing-docker-container)
+
+```bash
+
+docker stop nginx-proxy-manager "stop running container (https://docs.docker.com/engine/reference/commandline/stop/) "
+
+docker commit nginx-proxy-manager nginx-proxy-manager-new "commit the container (https://docs.docker.com/engine/reference/commandline/commit/) "
+
+docker run -p 22222:22 -td nginx-proxy-manager-new "re-[run]  from the commited image (https://docs.docker.com/engine/reference/commandline/run/)"
+```
+![[Pasted image 20250101233934.png]]
+
+- Configure Openssh-Server on container (How to Install and Enable SSH with Password Authentication on Ubuntu[[$ Comman in terminal macos & linux.]])
+- Test connect ssh with port 22222 on Macbook in VS Code
+```bash
+sudo service ssh start "start sshd services on container if recive alert (ssh: connect to host 172.16.18.92 port 22222: Connection refused)"
+```
+![[Pasted image 20250101235510.png]]

@@ -1,3 +1,24 @@
+
+- Install container Nginx-Proxy-Manager and Source for NGiNX Server Manager [link](https://hub.docker.com/r/jc21/nginx-proxy-manager)
+```bash
+services: 
+  nginx-proxy-manager:
+      image: jc21/nginx-proxy-manager
+      container_name: nginx-proxy-manager
+      ports:
+        - 80:80
+        - 81:81
+        - 443:443
+      volumes: 
+        - /home/tech/files/docker/volumes/nginx-proxy-manager/data:/data
+        - /home/tech/files/docker/volumes/nginx-proxy-manager/letsencrypt:/etc/letsencrypt
+      restart: unless-stopped
+
+
+docker compose up -d "create container form docker compose file.yml"
+```
+![[Pasted image 20250101231643.png]]
+
 Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
 - Free domain for local Duck DNS [link](https://www.duckdns.org/domains)
 *Note:* only use five sub domain for maximum.
@@ -9,8 +30,6 @@ Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
 
 - Create Proxy Host for devices/vm in you systems.
 ![[Pasted image 20241227115031.png]]
-
-- Source for NGNIX Server Manager [link](https://hub.docker.com/r/jc21/nginx-proxy-manager)
 
 ##### **How to NAT Nginx from local to internet**
 
