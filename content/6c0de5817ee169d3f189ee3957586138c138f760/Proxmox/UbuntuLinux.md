@@ -11,6 +11,8 @@
 ```bash
 cd /etc/netplan/
 sudo nano 01-network-manager-all.yaml
+nmcli device show ens19 | grep IP4.DNS "show information dns using on ubintu"
+ip r | grep default "show information default network card using on ubintu"
 ```
 
 - **Configure file information:**
