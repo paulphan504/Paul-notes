@@ -243,3 +243,13 @@ Host doubleclick.net not found: 3(NXDOMAIN)"
 ```
 
 ##### 16. **How to install Qemu_Guest_agent on Debian/Promoc_VE**
+
+##### 17. **How to setup two container Nginx-Proxy-Manager running balance** 
+
+-  why not configure on two Nginx-Proxy-Manager new create but can connect success to domain : https://npm.paulproxmox.duckdns.org/login, https://ads.paulproxmox.duckdns.org/, https://proxmox.paulproxmox.duckdns.org/
+- reslove: no accident because docker remember container old, ability create two container running same port but only container initial effective (ex: nginx-proxy-manager:81:81 running correct, while nginx-proxy-manager:86:81 not access login host after configure)
+- create new container with other port (85:80, 86:81, 446:443)from container commit, but only configure 
+	- ssl certificate (try on two account of DuckDNS paulphan504.duckdns.org and paulproxmox.duckdns.org) -> success
+	- host (portainer.paulphan504.duckdns.org) -> success create and nslookup correct domain and ip public but not action login to services (potainer).
+##### 18. **Build addition one Ubuntu_Server/Docker/Portainer&Nginx-proxy-manager test balance**
+##### 19. **How to use Treafik services for home lab**

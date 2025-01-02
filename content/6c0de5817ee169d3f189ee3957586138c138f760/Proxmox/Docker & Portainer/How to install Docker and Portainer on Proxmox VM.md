@@ -30,7 +30,9 @@ docker stop nginx-proxy-manager "stop running container (https://docs.docker.com
 
 docker commit nginx-proxy-manager nginx-proxy-manager-new "commit the container (https://docs.docker.com/engine/reference/commandline/commit/) "
 
-docker run -p 22222:22 -td nginx-proxy-manager-new "re-[run]  from the commited image (https://docs.docker.com/engine/reference/commandline/run/)"
+docker run -p 22222:22 -p 80:80 -p 81:81 -p 443:443 -td nginx-proxy-manager-new "re-[run]  from the commited image (https://docs.docker.com/engine/reference/commandline/run/)"
+
+docker run -p 223:22 -p 85:80 -p 86:81 -p 446:443 -td nginx-proxy-manager-second "you can create new container running same services with port setup manual and sure port manual not us for other services (loadbalance services on docker/container). note: you must commit image container befor create new container"  
 ```
 ![[Pasted image 20250101233934.png]]
 
