@@ -244,6 +244,15 @@ Host doubleclick.net not found: 3(NXDOMAIN)"
 
 ##### 16. **How to install Qemu_Guest_agent on Debian/Promoc_VE**
 
+<mark style="background: #BBFABBA6;">Resolve</mark>
+
+Refer: [link](https://forum.proxmox.com/threads/install-qemu-guest-agent-debian-7-wheezy.71437/)
+```bash
+apt-cache policy qemu-guest-agent "show version available"
+apt install qemu-guest-agent=<versionnumberyouwanthere> 
+apt --fix-broken install "use command if accident occurs"
+```
+![[Pasted image 20250103172919.png]]
 ##### 17. **How to setup two container Nginx-Proxy-Manager running balance** 
 
 -  why not configure on two Nginx-Proxy-Manager new create but can connect success to domain : https://npm.paulproxmox.duckdns.org/login, https://ads.paulproxmox.duckdns.org/, https://proxmox.paulproxmox.duckdns.org/
@@ -252,4 +261,32 @@ Host doubleclick.net not found: 3(NXDOMAIN)"
 	- ssl certificate (try on two account of DuckDNS paulphan504.duckdns.org and paulproxmox.duckdns.org) -> success
 	- host (portainer.paulphan504.duckdns.org) -> success create and nslookup correct domain and ip public but not action login to services (potainer).
 ##### 18. **Build addition one Ubuntu_Server/Docker/Portainer&Nginx-proxy-manager test balance**
+
+| UbuntuServerSecond                                                                                                                                                                                   | Information                                           |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------- |
+| Ip address: static                                                                                                                                                                                   | 172.16.18.79/27                                       |
+| Gateway:                                                                                                                                                                                             | 172.16.18.68                                          |
+| DNS: 107 (Debian9.2)/AdguradHome                                                                                                                                                                     | 172.16.18.89                                          |
+| Username/Password: Local<br>Username/Password: root                                                                                                                                                  | paul/...<br>root/...                                  |
+| Landscape account manage: [link](https://landscape.canonical.com/account/a0glnmc7)<br>Password: on dashlane <br>Account ubuntu pro personal: [link](https://ubuntu.com/pro)<br>Password: on dashlane | paul-ubuntu-server-secon<br><br>paulphan504@gmail.com |
+| **Container**                                                                                                                                                                                        | **Information**                                       |
+| Portainer:<br>Username:<br>Password: on dashlane                                                                                                                                                     | 172.16.18.79:9443<br>admin<br>...<br>                 |
+| Nginx-proxy-manager-second<br>Username:<br>Password: on dashlane                                                                                                                                     | 172.16.18.79:81<br>paulphan504@gmail.com              |
+- build success Ubuntu_Server with pro license for personal and add computer to [Landscape ](https://landscape.canonical.com/account/a0glnmc7) ![[Pasted image 20250103160421.png]]
+- configure ssl on Nginx not success, because accident with information "ack certificate too many time" on two account paulphan504.duckdns.org and paulpromox.duckdns.org. (<mark style="background: #FFF3A3A6;">reconfigure after unlock</mark>)
+- **How to create container via VS Code with compose file .yml**
+	-  Implement ssh to server/vm running Docker in this lab use Ubuntu_Server
+	- Create file docker-compose.yml after fill information same in image below press Compose Up, container will create and add to extention Docker in VS Code.
+![[Pasted image 20250104222858.png]]
+![[Pasted image 20250104223424.png]]
+
+
 ##### 19. **How to use Treafik services for home lab**
+
+20. Fix Ubuntu-server-secon not upgrade
+- change network card recive dhcp 
+```bash
+nano /etc/netplan/50....
+
+```
+**<mark style="background: #BBFABBA6;">Resolve: because conflict ip occurs </mark>**

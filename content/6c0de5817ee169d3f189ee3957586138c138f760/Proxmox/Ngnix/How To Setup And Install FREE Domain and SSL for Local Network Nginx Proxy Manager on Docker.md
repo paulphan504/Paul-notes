@@ -1,4 +1,4 @@
-
+Refer: [link1](https://www.rapidseedbox.com/blog/nginx-proxy-manager#04) [link2](https://nginxproxymanager.com/guide/)
 - Install container Nginx-Proxy-Manager and Source for NGiNX Server Manager [link](https://hub.docker.com/r/jc21/nginx-proxy-manager)
 ```bash
 services: 
@@ -19,8 +19,12 @@ docker compose up -d "create container form docker compose file.yml"
 ```
 ![[Pasted image 20250101231643.png]]
 
+##### **How to configure Nginx translate ip devices in system to domain running with ssl local** 
+
 Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
+
 - Free domain for local Duck DNS [link](https://www.duckdns.org/domains)
+
 *Note:* only use five sub domain for maximum.
 
 ![[Screenshot 2024-12-09 at 16.25.02.png]]
@@ -47,3 +51,5 @@ Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
 
 - Access to Nginx vm on web browser, sure everything success
 ![[Pasted image 20241225103736.png]]
+
+
