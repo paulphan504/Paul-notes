@@ -296,3 +296,5 @@ nano /etc/netplan/50....
 **<mark style="background: #BBFABBA6;">Resolve: because conflict ip occurs </mark>**
 
 ##### 21. **Build Ubuntu_Server_Second or Ubuntu_Server became Proxy action with Lan_Network Firewall PFsense.**
+- not success because not nat port 81 and 443  for ip provide in vlan firewall pfsense frome modem isp.
+##### 22. **How to change keypair for aws e2 free tier on aws**
