@@ -203,4 +203,13 @@ ssh root@172.16.18.92 "login ssh on macbook to ubuntu_server with root account a
 ```
 ![[Pasted image 20241229225324.png]]
 
-How to 
+How to add more interfaces network and disable/enable interface in Ubuntu-Server/Proxmox-VE
+```bash
+sudo inconfig -a "show all information interfces"
+sudo netplan apply "apply action file configure interfaces in directory /netplan"
+sudo ifconfig -s "show status all interfaces"
+sudo traceroute cnn.com "show route traffic"
+sudo ifconfig <name-interface> down "disable interface you expect (ex: sudo ifconfig ens18 down) "
+sudo ifconfig <name-interface> up "enable interface you expect"
+sudo netplan apply "apply action file configure interfaces in directory /netplan"
+```

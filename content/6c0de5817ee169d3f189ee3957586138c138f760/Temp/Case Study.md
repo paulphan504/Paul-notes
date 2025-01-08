@@ -145,6 +145,8 @@ AllowedIPs = 10.0.0.4/32
 ![[Pasted image 20241230181822.png]]
 
 ##### [12. **How to install Qemu_Guest_Agent on Ubuntu](https://forum.proxmox.com/threads/solved-guest-agent-not-running.149049/)**
+
+**Note**: Enable Qemu_Guest_Agent on VM form Option->Qemu_Guest_Agent->tick choose enable before install and configure Qemu.
 - Follow these steps This is the daemon used to exchange data between the guest and the host.
 ```bash
 apt-get install qemu-guest-agent "command installs it."
@@ -279,14 +281,18 @@ apt --fix-broken install "use command if accident occurs"
 	- Create file docker-compose.yml after fill information same in image below press Compose Up, container will create and add to extention Docker in VS Code.
 ![[Pasted image 20250104222858.png]]
 ![[Pasted image 20250104223424.png]]
-
+##### **How to fix new container keep old configure** 
+- everything you only need delete directory of volume configure 
+![[Pasted image 20250108110204.png]]
 
 ##### 19. **How to use Treafik services for home lab**
 
-20. Fix Ubuntu-server-secon not upgrade
+##### **20. Fix Ubuntu-server-secon not upgrade**
 - change network card recive dhcp 
 ```bash
 nano /etc/netplan/50....
 
 ```
 **<mark style="background: #BBFABBA6;">Resolve: because conflict ip occurs </mark>**
+
+##### 21. **Build Ubuntu_Server_Second or Ubuntu_Server became Proxy action with Lan_Network Firewall PFsense.**
