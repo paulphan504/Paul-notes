@@ -298,3 +298,12 @@ nano /etc/netplan/50....
 ##### 21. **Build Ubuntu_Server_Second or Ubuntu_Server became Proxy action with Lan_Network Firewall PFsense.**
 - not success because not nat port 81 and 443  for ip provide in vlan firewall pfsense frome modem isp.
 ##### 22. **How to change keypair for aws e2 free tier on aws**
+
+##### 23. **How to fix domain on duckdns not register with nginx-proxy-manager**
+
+- Use cloudeflare add domain name register form duckdns.
+![[Pasted image 20250108224414.png]]
+- Choose Domain need resolve accident, move to tab DNS->Records->tick choose all records and delete.
+![[Pasted image 20250108224935.png]]
+
+- Realize register domain to ssl-certificate off nginx-proxy-manager again [[How To Setup And Install FREE Domain and SSL for Local Network Nginx Proxy Manager on Docker]] 
