@@ -307,3 +307,5 @@ nano /etc/netplan/50....
 ![[Pasted image 20250108224935.png]]
 
 - Realize register domain to ssl-certificate off nginx-proxy-manager again [[How To Setup And Install FREE Domain and SSL for Local Network Nginx Proxy Manager on Docker]] 
+
+24. Build IDS/IPS on firewall pfsense snord and surikata.

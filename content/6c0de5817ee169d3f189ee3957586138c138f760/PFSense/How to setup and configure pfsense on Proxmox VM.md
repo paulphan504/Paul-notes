@@ -143,4 +143,3 @@ Connect to vpn on Macos/Windows and test speed internet.
 
 Check traffic flow via DNS setup on WireGurad client (can use dns server Adgurad_setup_local,  Cloudflare, Google ), and check Gateway directive to Gateway off Wiregurad_VPN/PFsense/Router_ISP.
 ![[Screenshot 2024-12-26 at 17.33.15.png]]
-

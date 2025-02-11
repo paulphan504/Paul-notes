@@ -59,6 +59,12 @@ Now we mount the drive to it
 mount /dev/sdb1 /mnt/USB_Data
 ```
 
+Example: copy iso file from extend hdd storage to iso directory on proxmox 
+```bash
+root@paulproxmox:/mnt/USB_Data# cp WServer_2022_DC-016.ISO /mnt/pve/EXT/template/iso/ "copy iso image source form extend hdd mount to directory iso off extend storage setup on proxmox "
+
+root@paulproxmox:/mnt/USB_Data# cp WServer_2022_DC-016.ISO /var/lib/vz/template/iso "copy iso image source from extend hdd mount to iso directory on proxmox"
+```
 ##### [How to install 7zip to extract zip/rar file](https://askubuntu.com/questions/348173/how-to-install-7zip-to-extract-rar-files)
 To unrar files with... 7zip: 
 ```bash
