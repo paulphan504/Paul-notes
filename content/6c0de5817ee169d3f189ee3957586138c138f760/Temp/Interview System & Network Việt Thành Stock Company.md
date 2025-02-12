@@ -1,3 +1,5 @@
+Mr. Quân Hiring Executive **0906.679.613**
+Ms. Trà recruitment call and contact information **0941.422.604**
 1. talk about experience when working at two company near by of time ?
 2. how many devices server physical you manage ?
 3. how many vm machine manage ?
@@ -23,8 +25,14 @@
 15. you have experience with some system os of linux ? (Centos, Ubuntu, Readhat, Debian)
 16. Do you have any question for me about company ?
 	- infrastructure of team i will join and working directive 
+		-> two people same title Staff backup together (porn 1996 & 2000) manage directed by CEO.
 	- in the feature long time maybe 5 year system and team IT will develope with the big gold how ?
+		-> no plan information, can contact direct form CEO.
 	- if i working long time with company and create many value for your company, i will have some upgrade how ?
-	- if you can share, please for me about time working, insurance, benefit if have when i have opportuinity working in your company in the peariod of time near by ? 
-17. some time in saturday will have OT for test system with govement you can willing for it ?
-18. tell me know the plan you will action with task priority every day ?  (1 hour for check all systems, meeting, assittan, preview and take note informations nessesery, create guide for systems process and fix error )
+		-> no plan upgrade new title for this position in the feature.
+	- if you can share, please for me about time working, insurance, benefit if have when i have opportunity working in your company in the peariod of time near by ? 
+		-> time working form monday - friday (some time willing work OT test system with HCM Stock Exchange)
+		-> insurance basic flow of government
+		-> 
+17. some time in saturday will have OT for test system with government you can willing for it ?
+18. tell me know the plan you will action with task priority every day ?  (1 hour for check all systems, meeting, assistant, preview and take note informations necessary, create guide for systems process and fix error).
