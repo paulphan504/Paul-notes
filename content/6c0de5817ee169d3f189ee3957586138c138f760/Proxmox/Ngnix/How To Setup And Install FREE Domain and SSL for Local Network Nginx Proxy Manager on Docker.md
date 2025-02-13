@@ -52,4 +52,7 @@ Refer link setup: https://www.youtube.com/watch?v=acturgE4TmE&t=36s
 - Access to Nginx vm on web browser, sure everything success
 ![[Pasted image 20241225103736.png]]
 
+###### **Case Study:**
+- **Accident**: container running Nginx_Proxy_Manager start but not running correct with config setup ssl certificate for ip replay by domain name.
+	**-> Fix:**   update and upgrade all packet nescessary for os (ubuntu/debian/readhat/openpsd....). 
 
