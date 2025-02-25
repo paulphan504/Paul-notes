@@ -13,9 +13,9 @@ Go through the setup process (select : static IP address using the spacebar)
 5. After the reset process is finished, your EVE-NG will be set up with the new static IP address.
 ##### **How to setup network for virtual devices**
 
-*note:* in this homelab devices connect internet with static ip address example `172.16.18.88 | 255.255.255.224 | GW: 172.16.18.68 | DNS: 172.16.18.81 (my macbook setup Adgurad DNS control all network) `
+*note:* in this home lab devices connect internet with static ip address example `172.16.18.88 | 255.255.255.224 | GW: 172.16.18.68 | DNS: 172.16.18.81 (my macbook setup Adgurad DNS control all network) `
 - bridge: ability connect to internet
-- Management(Cloud0): ability ocnnect to internet
+- Management(Cloud0): ability connect to internet
 ![[Pasted image 20241130170157.png]]
 
 ##### **[How to fix cisco IOL auto turn off after start 2 second](https://www.eve-ng.net/index.php/documentation/howtos/howto-add-cisco-iol-ios-on-linux/)**
