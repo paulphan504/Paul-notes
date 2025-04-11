@@ -287,7 +287,7 @@ apt --fix-broken install "use command if accident occurs"
 
 ##### 19. **How to use Treafik services for home lab**
 
-##### **20. Fix Ubuntu-server-secon not upgrade**
+##### **20. Fix Ubuntu-server-second not upgrade**
 - change network card recive dhcp 
 ```bash
 nano /etc/netplan/50....
@@ -297,7 +297,7 @@ nano /etc/netplan/50....
 
 ##### 21. **Build Ubuntu_Server_Second or Ubuntu_Server became Proxy action with Lan_Network Firewall PFsense.**
 - not success because not nat port 81 and 443  for ip provide in vlan firewall pfsense frome modem isp.
-##### 22. **How to change keypair for aws e2 free tier on aws**
+##### 22. **How to change keypair for aws ec2 free tier on aws**
 
 ##### 23. **How to fix domain on duckdns not register with nginx-proxy-manager**
 
