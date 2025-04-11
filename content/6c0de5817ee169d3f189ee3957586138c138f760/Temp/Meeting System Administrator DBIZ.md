@@ -7,7 +7,7 @@
 
 ##### **Cloud CMC**
 - familiar with structure and method action off environment
-	- Contact sale create environment test
+	- - Contact sale create environment test
 		- 
 
 ##### **Cloud Clearsky**
