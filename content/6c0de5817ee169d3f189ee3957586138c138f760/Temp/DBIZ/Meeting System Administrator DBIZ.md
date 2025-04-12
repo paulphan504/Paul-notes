@@ -12,3 +12,5 @@
 
 ##### **Cloud Clearsky**
 - familiar with structure and method action off environment
+
+![[Pasted image 20250412120524.png]]
