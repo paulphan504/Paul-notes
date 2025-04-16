@@ -25,7 +25,7 @@
 - Kiểm tra chạy thử (DBIZ & IT KHÁCH)
 	- Đảm bảo mạng thông giữa các máy chủ sau khi chuyển đổi ip
 		- Tắt tường lửa trên các máy chủ
-		- Kiểm tra chính sách chặn trên thiết bị tường lửa (rule deny icmp protocal)
+		- Kiểm tra chính sách chặn trên thiết bị tường lửa (rule deny icmp protocol)
 	- Đảm bảo các máy chủ và dịch vụ bật
 	- Đảm bảo app hoat động và phát sinh giao dịch thành công
 	- Đảm bảo thực hiện các công tác cài đặt lịch tạo bản sao dữ liệu cho máy chủ CSDL
