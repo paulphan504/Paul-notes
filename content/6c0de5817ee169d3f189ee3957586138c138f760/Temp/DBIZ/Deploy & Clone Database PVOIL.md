@@ -1,11 +1,11 @@
 **Mô tả:** 
 - CSDL: cơ sở dữ liệu
 - Máy chủ: máy chủ ảo hoá trên môi trường khách hàng
-- Mạng: tất cả máy chủ web, csdl, app... chạy trên cùng một mạng 192.168.21.0/24
+- Mạng: tất cả máy chủ web, csdl, app... chạy trên cùng một mạng 192.168.21.0/24 và được gán ip tĩnh
 - Hệ điều hành chạy csdl: Oracale Linux
 - Cơ sở dữ liệu: postgred sql
-- Máy chủ csdl cũ: 192.168.21.56:443
-- Máy chủ csdl mới: 192.168.21.71:443
+- Máy chủ csdl cũ: 192.168.21.56
+- Máy chủ csdl mới: 192.168.21.71
 - Thời gian dự kiến: 12h AM - 05 AM 16-04-2025
 - Thời gian hoàn thành: 1h50 AM 16-04-2025
 - Thời gian chuẩn bị: 11h PM 15-04-2025
@@ -42,5 +42,5 @@
 	```
 
 **Hỏi & Đáp:**
-- Tại sao khi đã phát sinh giao dịch lại không thể rollback lại máy chủ csdl cũ (Dần chia sẻ)
-- Tại sao phải ping thông giữa máy chủ app và các máy chủ còn lại mới có thể trao đổi thông tin (A.Minh chia sẻ).
+- Khi đã phát sinh giao dịch lại không thể rollback lại máy chủ csdl cũ ? (Dần chia sẻ)
+- Ping thông giữa máy chủ app và các máy chủ còn lại mới có thể trao đổi thông tin ? (A.Minh chia sẻ).
