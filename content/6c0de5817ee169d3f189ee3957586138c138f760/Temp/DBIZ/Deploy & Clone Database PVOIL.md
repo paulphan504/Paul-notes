@@ -10,6 +10,8 @@
 - Thời gian hoàn thành: 1h50 AM 16-04-2025
 - Thời gian chuẩn bị: 11h PM 15-04-2025
 - Thời gian bắt đầu: 12h AM 16-04-2025
+![[Pasted image 20250416103034.png]]
+![[Pasted image 20250416103115.png]]
 
 **Nôi dung:** 
 - Thực hiện triển khai di chuyển hệ thống cơ sở dữ liệu từ máy chủ cũ sang máy chủ mới  (DBIZ)
