@@ -310,4 +310,6 @@ nano /etc/netplan/50....
 
 24. Build IDS/IPS on firewall pfsense snord and surikata.
 
-25. 
+25. [How to fix error](https://stackoverflow.com/questions/70818543/mongo-db-deployment-not-working-in-kubernetes-because-processor-doesnt-have-avx) "sql MongoDB 5.0+ requires a CPU with AVX support, and your current system does not appear to have that! "
+- change cpu to **host** configure in proxmox ve manage vm running mongodb 
+  ![[Pasted image 20250422085719.png]]

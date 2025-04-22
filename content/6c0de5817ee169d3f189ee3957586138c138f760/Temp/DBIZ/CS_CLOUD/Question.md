@@ -1,4 +1,0 @@
-- Làm cách nào để xem log trên OPNsense (có những loại log nào) ?
-- Trường hợp người dùng vpn login không thành công có thể xem cảnh báo ở đâu trên cả hai nền tảng frontend & backend ?
-- Hệ thống đang backup những vm và những cấu hình gì ?
-- Trường hợp lỗi vms, lỗi OS thì có biện pháp backup và phục hồi như thế nào?

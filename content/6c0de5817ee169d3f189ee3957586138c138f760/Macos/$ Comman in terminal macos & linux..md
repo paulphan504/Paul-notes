@@ -183,3 +183,9 @@ networksetup -setdnsservers Wi-Fi
 sudo pmset repeat wakeorpoweron MTWRFSU 7:00:00 sleep MTWRFSU 23:30:00
 ```
 ##### **[ Brew Uninstall Package](https://www.warp.dev/terminus/brew-uninstall-package)**
+
+##### [**How to istall unar with homebrew**](https://superuser.com/questions/52124/how-can-i-extract-rar-files-in-macos)
+```bash
+brew install unrar # install Unrar on macos #
+unrar x <fiel unrar> # unrar file expect ex: unrar x 4U.rar #
+```
