@@ -12,14 +12,14 @@
 	- file mailname
 	  ```bash
 	  smtp.gmail.com
-``` 
+		``` 
 	- file pausetime
 	  ```bash
 	  180
-```
+		```
 	- file sendtimeout
 	  ```bash
 	  3600
-```
+		```
 
 ![[Pasted image 20250504164521.png]]
