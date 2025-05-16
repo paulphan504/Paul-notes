@@ -864,27 +864,32 @@ ssl_certificate_verification => false
 }
 }
 ```
-input {
-beats {
-port => 5044
-}
-}
-filter {
-if [type] == “syslog” {
-grok {
-match => { “message” => “%{SYSLOGLINE}” }
-}
-date {
-match => [ “timestamp”, “MMM d HH:mm:ss”, “MMM dd HH:mm:ss” ]
-}
-}
-}
-output {
-elasticsearch {
-hosts => [“https://172.16.3.3:9200"]
-index => “%{[@metadata][beat]}-%{+YYYY.MM.dd}”
-user => “elastic”
-password => “Dbiz@#2025”
-ssl_certificate_verification => false
-}
-}
+
+sudo useradd vncuserdbiz
+sudo passwd Dbiz2025
+[link youtube](https://www.youtube.com/watch?v=ws1J9nKpAKc)
+
+
+openssl s_client -connect 172.16.3.3.:443 -showcerts
+openssl x509 -fingerprint -sha256 -in /etc/elasticsearch/certs/http_ca. crt
+
+ce:b7:dd:3d:80:a5:0d:5c:52:50:1f:e8:5d:d4:3d:a3:3c:b9:22:87:01:17:05:6f:af:6f:fd:b5:22:fa:72:9e
+
+ssl:
+	enabled: true
+	ca_trusted_fingerprint: "ceb7dd3d80a50d5c52501fe85dd43da33cb922870117056faf6ffdb522fa729e"
+
+#### - **Research function manage apps and code** ![[Pasted image 20250510222139.png]]
+  
+
+**[HOW TO INSTALL LOGSTASH V8.10.2](https://medium.com/@yago82/comprehensive-guide-to-installing-and-configuring-logstash-on-linux-servers-3a10a14b77e8)**
+- API KEY FOR LOGSTASH: 
+  ```bash
+  Np0pzpYBV9ML_3tQ6U7o:hOl3kTYYYUVU0a9DM8Dm9A
+	```
+![[Pasted image 20250514164331.png]]
+
+password email app "phongict46@gmail.com"
+```bash
+utqi splb vapl qhet
+```
