@@ -12,7 +12,7 @@ Elasticsearch, Logstash, and Kibana, which 3 open-source applications developed,
 **Logstash** is a logging aggregator that accepts data from a variety of input sources, applies various transformations and enhancements, and then sends the data to a variety of supported output destinations.  
 **Kibana** is a visualization layer that sits on above Elasticsearch, which allowing users to examine and visualize data. Last but not least, Beats are simple agents which are put on edge hosts to collect various types of data before forwarding it into the stack.
 
-**How to Set Up RHEL to Install ELK S**tack****  
+**How to Set Up RHEL to Install ELK S**tack  
 
 Let’s install the ELK stack on the Oracle Linux server. Rocky and RHEL, as well as other RHEL-based distributions, can be installed using the same steps. Let’s get a brief overview of what each component:
 
