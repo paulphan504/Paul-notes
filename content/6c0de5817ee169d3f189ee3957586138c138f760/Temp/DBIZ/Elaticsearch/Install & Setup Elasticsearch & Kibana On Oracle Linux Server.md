@@ -133,3 +133,105 @@ firewall-cmd --reload
 ```
 ![[Pasted image 20250517062518.png]]
 **VIII.** Type on the browser, you will get a login page
+
+##### **How to configure send metrics postgresql to elasticsearch with metricbeat module (postgresql.yml)**
+
+**Note:** case study and command for this project
+
+- enable postgre in metricbeat 
+```bash
+sudo metricbeat modules enable postgresql
+sudo metricbeat modules disable system
+```
+
+- restart metricbeat
+```bash
+sudo systemctl status metricbeat -l
+sudo systemctl restart metricbeat
+```
+
+- login postgresql with port change
+```bash
+psql -U postgres -p 51173 "login with port 51173 default port 5432"
+
+\q "exit login postgresql"
+
+```
+
+- check permission on database postgresql **(alredy login superuser)**
+```bash
+\dp pg_stat_activity "check on ACTIVITY "
+
+\dp pg_stat_database "check on DATABASE "
+
+\dp pg_stat_bgwriter "check on BGWRITER "
+```
+
+- check database already create in postgresql
+```bash
+SELECT datname FROM pg_database WHERE datistemplate = false; "database"
+```
+
+- check port open 
+```bash
+netstat -tulnp
+```
+
+- test configure
+```bash
+sudo metricbeat test config
+```
+
+- check version postgresql
+```bash
+postgres --version
+```
+
+- allow port on firewall oracle linux server
+```bash
+sudo firewall-cmd --add-port=5432/tcp --permanent
+
+sudo firewall-cmd --add-port=51173/tcp --permanent
+
+sudo firewall-cmd --reload
+
+sudo firewall-cmd --list-all
+
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.3.12/24" port port="5432" protocol="tcp" accept'
+
+sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.3.12/24" port port="51173" protocol="tcp" accept'
+```
+
+**I.**  Enable metricbeat postgresql module on vm running postgresql.
+
+```bash
+sudo metricbeat modules enable postgresql
+```
+![[Pasted image 20250519045735.png]]
+
+**II.**  Configure information necessary for connect among metricbeat->postgresql->elasticsearch.
+
+```bash
+- module: postgresql
+
+metricsets:
+
+- database
+
+- bgwriter
+
+- activity
+
+- statement
+
+period: 10s
+
+hosts: ["postgres://172.16.3.12:51173?sslmode=disable"]
+
+username: postgres
+
+password: HrWL(f#vXnrIWNkL
+```
+![[Pasted image 20250519045459.png]]
+
+**III.**  
