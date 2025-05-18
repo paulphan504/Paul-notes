@@ -137,6 +137,9 @@ firewall-cmd --reload
 ##### **How to configure send metrics postgresql to elasticsearch with metricbeat module (postgresql.yml)**
 
 **Note:** case study and command for this project
+**Link reference:**
+	-  [PostgreSQL module cannot connect](https://discuss.elastic.co/t/postgresql-module-cannot-connect/220916)
+	-  [Postgresql module](https://www.elastic.co/docs/reference/beats/metricbeat/metricbeat-module-postgresql)
 
 - enable postgre in metricbeat 
 ```bash
@@ -201,6 +204,8 @@ sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address
 
 sudo firewall-cmd --permanent --add-rich-rule='rule family="ipv4" source address="172.16.3.12/24" port port="51173" protocol="tcp" accept'
 ```
+
+###### **Step by step configure**
 
 **I.**  Enable metricbeat postgresql module on vm running postgresql.
 
