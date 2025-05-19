@@ -141,6 +141,7 @@ firewall-cmd --reload
 **Link reference:**
 	-  [PostgreSQL module cannot connect](https://discuss.elastic.co/t/postgresql-module-cannot-connect/220916)
 	-  [Postgresql module](https://www.elastic.co/docs/reference/beats/metricbeat/metricbeat-module-postgresql)
+	- [Metricbeat PostgreSQL Dashboard](https://dbtut.com/index.php/2021/02/04/metricbeat-postgresql-dashboard/)
 
 - enable postgre in metricbeat 
 ```bash
@@ -219,25 +220,40 @@ sudo metricbeat modules enable postgresql
 
 ```bash
 - module: postgresql
-
-metricsets:
-
-- database
-
-- bgwriter
-
-- activity
-
-- statement
-
-period: 10s
-
-hosts: ["postgres://172.16.3.12:51173?sslmode=disable"]
-
-username: postgres
-
-password: HrWL(f#vXnrIWNkL
+  metricsets:
+	 - database
+	 - bgwriter
+	 - activity
+	 - statement
+  period: 10s
+  hosts: ["postgres://172.16.3.12:51173?sslmode=disable"]
+  username: postgres
+  password: HrWL(f#vXnrIWNkL
 ```
 ![[Pasted image 20250519045459.png]]
 
-**III.**  
+**III.**  Create statements extension on postgresql serve for information collection send to elasticsearch and show on dashboard in kibana.
+
+```bash
+create extension pg_stat_statements; "create extension, alredy login success postgresql"
+```
+![[Pasted image 20250519111648.png]]
+
+- Add information to file nano /data/pg/postgresql.conf (restart postgresql require)
+```bash
+shared_preload_libraries = 'pg_stat_statements'
+pg_stat_statements.max = 10000
+pg_stat_statements.track = all 
+```
+![[Pasted image 20250519111332.png]]
+
+
+- Install postgresql on oracle linux 8 (only serve for test collection metrics via postgresql module with extension pg_stat_statements): [link](https://www.atlantic.net/dedicated-server-hosting/how-to-install-and-secure-postgresql-server-on-oracle-linux/)
+```bash
+CREATE USER postgresql WITH CREATEDB CREATEROLE PASSWORD 'Dbiz@#2025';
+```
+
+```bash
+CREATE DATABASE testdb OWNER postgresql;
+```
+
