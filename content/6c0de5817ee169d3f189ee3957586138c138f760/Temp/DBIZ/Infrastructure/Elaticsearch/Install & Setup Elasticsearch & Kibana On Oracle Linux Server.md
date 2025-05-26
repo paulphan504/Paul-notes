@@ -555,11 +555,11 @@ Refer: [link](https://stackoverflow.com/questions/67831737/how-can-i-change-all-
 
 
 
-- Backup elasticsearch & kibanna
+##### **How to Backup elasticsearch & kibanna**
 	- Snapshot ? [link](https://www.elastic.co/docs/deploy-manage/tools/snapshot-and-restore)
-	- 
+	
 
-- Send email alerts via google & ms exchange 365
+##### **Send email alerts via google & ms exchange 365**
 	- send email via google email with logstash ?
 
-- How to downgrade logstash 9 to 8 version on vm monitor ?
+##### **How to downgrade logstash 9 to 8 version on vm monitor ?**
