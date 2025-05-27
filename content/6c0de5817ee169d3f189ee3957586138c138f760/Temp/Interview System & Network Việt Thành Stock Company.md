@@ -34,4 +34,4 @@ Ms. Trà recruitment call and contact information **0941.422.604**
 		-> time working form monday - friday (some time willing work OT test system with HCM Stock Exchange).
 		-> insurance basic flow of government.
 17. some time in saturday will have OT for test system with government you can willing for it ?
-18. tell me know the plan you will action with task priority every day ?  (1 hour for check all systems, meeting, assistant, preview and take note informations necessary, create guide for systems process and fix error). 
+18. tell me know the plan you will action with task priority every day ?  (1 hour for check all systems, meeting, assistant, preview and take note informations necessary, create guide for systems process and fix error). test12345
