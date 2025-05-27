@@ -384,13 +384,22 @@ export async function handleBuild(argv) {
       }
 
       let fp = req.url?.split("?")[0] ?? "/"
+      // Sanitize and validate the file path
+      const normalizedPath = path.posix.normalize(fp);
+      const resolvedPath = path.posix.join(argv.output, normalizedPath);
+      if (!resolvedPath.startsWith(argv.output)) {
+        console.log(chalk.red(`[403] ${req.url} (invalid path)`));
+        res.writeHead(403);
+        res.end();
+        return;
+      }
 
       // handle redirects
       if (fp.endsWith("/")) {
         // /trailing/
         // does /trailing/index.html exist? if so, serve it
         const indexFp = path.posix.join(fp, "index.html")
-        if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
+        if (fs.existsSync(path.posix.join(argv.output, path.posix.normalize(indexFp)))) {
           req.url = fp
           return serve()
         }
@@ -400,7 +409,7 @@ export async function handleBuild(argv) {
         if (path.extname(base) === "") {
           base += ".html"
         }
-        if (fs.existsSync(path.posix.join(argv.output, base))) {
+        if (fs.existsSync(path.posix.join(argv.output, path.posix.normalize(base)))) {
           return redirect(fp.slice(0, -1))
         }
       } else {
@@ -410,14 +419,14 @@ export async function handleBuild(argv) {
         if (path.extname(base) === "") {
           base += ".html"
         }
-        if (fs.existsSync(path.posix.join(argv.output, base))) {
+        if (fs.existsSync(path.posix.join(argv.output, path.posix.normalize(base)))) {
           req.url = fp
           return serve()
         }
 
         // does /regular/index.html exist? if so, redirect to /regular/
         let indexFp = path.posix.join(fp, "index.html")
-        if (fs.existsSync(path.posix.join(argv.output, indexFp))) {
+        if (fs.existsSync(path.posix.join(argv.output, path.posix.normalize(indexFp)))) {
           return redirect(fp + "/")
         }
       }
