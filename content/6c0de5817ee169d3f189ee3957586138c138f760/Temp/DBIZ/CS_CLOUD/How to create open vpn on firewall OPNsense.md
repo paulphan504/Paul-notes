@@ -17,7 +17,7 @@
 
 ##### **How to change certificate expire**
 
-**I.** Login account manage choose User, fill account name example "phongnt" , choose figure the same with number 3 describe in image  for search certificate by user.
+**I.** Login account manage, choose User fill account name example "phongnt" , choose figure the same with number 3 describe in image  for search certificate by user.
 ![[Pasted image 20250527102937.png]]
 
 **II.** You can show information vaild date.
@@ -31,4 +31,4 @@ If expire you can create new certificate with option Clone certificate form expi
 **IV.** Export information include user and certificate to file configure and send to user.
 ![[Pasted image 20250526180339.png]]
 
-##### **How to add openvpn file from macos**
+##### **[[How to add openvpn file from macos]]**
