@@ -31,4 +31,4 @@ If expire you can create new certificate with option Clone certificate form expi
 **IV.** Export information include user and certificate to file configure and send to user.
 ![[Pasted image 20250526180339.png]]
 
-##### **[[How to add openvpn file from macos]]**
+##### **[[How to add openvpn file on macos]]**

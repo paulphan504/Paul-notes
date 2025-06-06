@@ -3,7 +3,7 @@
 **I.** Login office 365 web page : [link](https://www.office.com/)
 ![[Pasted image 20250524112032.png]]
 
-**II.** Fill in information account provide by System Administrator Dbiz.
+**II.** Fill in information account provide by Admin Dbiz.
 ![[Pasted image 20250524112207.png]]
 ![[Pasted image 20250524112513.png|300]]
 
@@ -11,9 +11,9 @@
 ![[Pasted image 20250524112627.png|300]]
 ![[Pasted image 20250524113045.png|300]]
 
-**IV.** Login success home pages, you can choose apps serve for task
+**IV.** Login success home pages, you can choose **Outlook** or apps serve for task
 ![[Pasted image 20250524113708.png]]
-
+The end.
 
 ### **How to add Signature for outlook office 365 online**
 

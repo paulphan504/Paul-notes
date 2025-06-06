@@ -33,3 +33,5 @@ telnet 172.16.3.3 5601
 ```
 ![[Pasted image 20250530141919.png]]
 The end.
+
+[[How To Setting Openvpn Auto Start When Turn Off Or Shutdown OS]]
