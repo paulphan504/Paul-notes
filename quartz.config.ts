@@ -8,7 +8,7 @@ import * as Plugin from "./quartz/plugins"
  */
 const config: QuartzConfig = {
   configuration: {
-    pageTitle: "🪴 https://paulphan504.github.io/Paul-notes/6c0de5817ee169d3f189ee3957586138c138f760/image/rice-flowers-g440381ab8_640.jpg Paul Notes",
+    pageTitle: "🪴 Paul Notes",
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
